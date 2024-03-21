@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Full Responsive and Customizable Portfolio
 
-## Getting Started
+<p align="left">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
+  <img src="https://github.com/kuri-sun/portfolio/assets/62743644/3826258f-68cf-4c32-b94a-fdbe64462d75" alt="elasticsearch" width="40" height="40"/>
+  <img src="https://github.com/kuri-sun/portfolio/assets/62743644/99f88f0f-21d0-461e-b3bc-fd0695879d76" alt="elasticsearch" width="40" height="40"/>
+  <img src="https://github.com/kuri-sun/portfolio/assets/62743644/34216922-fae1-48be-a72b-dae01e0e75e8" alt="elasticsearch" width="40" height="40"/>
+</p>
+Used React to populate the portfolio, and styling up with Tailwind.
+Linked this GitHub repository with Netlify to configure deploy automation.
 
-First, run the development server:
+app url: https://haruki-kuriwada.netlify.app
+<br/>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![laptop](https://github.com/kuri-sun/portfolio/assets/62743644/54bac1c5-e58c-4a99-98e3-5b7a5482c759)
+<br/>
+![mockuper](https://github.com/kuri-sun/portfolio/assets/62743644/c1c79c76-33a4-4283-b41e-77b499744cb5)
+<br/>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Leveraged Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- React
+- HTML
+- CSS3
+- Tailwind
+- Netlify
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+**️♿ Accessibility**
 
-To learn more about Next.js, take a look at the following resources:
+**☀️🌙 Dark&Light mode**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**📱 Fully Responsive**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**🎨 Tailwind with easy maintenance**
 
-## Deploy on Vercel
+## 🛠 Setup instruction
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+0. You need `node.js` and `git` installed globally on your machine.
+1. Clone this repository.
+2. Installation: `npm install`
+3. In the project directory, you can run: `npm start`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open http://localhost:3000 in your browser and Boom!!
+
+## Support
+
+Leave a Star⭐ if you liked this!
+<br/><br/>
+**Thank you! Have a great morning/afternoon/night!**
