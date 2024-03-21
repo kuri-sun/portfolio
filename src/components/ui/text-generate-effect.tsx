@@ -23,7 +23,6 @@ export const TextGenerateEffect = ({
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log("animate", delay);
       animate(
         "span",
         {
@@ -46,9 +45,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className={
-                "dark:text-white text-black opacity-0 " + wordClassNames
-              }
+              className={"opacity-0 " + wordClassNames}
             >
               {word}{" "}
             </motion.span>
