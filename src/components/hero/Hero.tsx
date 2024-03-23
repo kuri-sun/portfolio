@@ -1,14 +1,9 @@
 "use client";
 import React from "react";
-import {
-  faGithub,
-  faLinkedinIn,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
-import { WavyBackground } from "../ui/wavy-background";
 
 export function Hero() {
   return (
@@ -16,7 +11,8 @@ export function Hero() {
       id="home"
       className={`flex w-full items-center md:items-start flex-col text-white mt-16`}
     >
-      <WavyBackground className="flex flex-col">
+      {/* <CustomBackground /> */}
+      <div className="flex flex-col">
         <div className="flex flex-col md:flex-row items-center justify-between text-white ">
           <div className="flex flex-col">
             <TextGenerateEffect
@@ -92,7 +88,7 @@ export function Hero() {
             </button>
           </div>
         </div>
-      </WavyBackground>
+      </div>
     </div>
   );
 }
