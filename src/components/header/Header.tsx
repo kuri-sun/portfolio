@@ -22,7 +22,7 @@ export function Header() {
     return () => {
       window.onscroll = null;
     };
-  }, []);
+  }, [isTop]);
 
   const onClickLightDarkMode = () => {
     const html = document.querySelector("html");
@@ -35,12 +35,12 @@ export function Header() {
     <div
       className={twMerge(
         "z-[100] w-full transition-all duration-1000 px-14 md:px-18 lg:px-24 xl:px-36",
-        isTop ? "top-[16px]" : "sticky top-[8px]"
+        isTop ? "top-[0px]" : "sticky top-[8px]"
       )}
     >
       <div
         className={twMerge(
-          "relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-white text-black dark:text-white dark:bg-gray-800 py-2 px-8",
+          "relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-white text-black dark:text-white dark:bg-neutral-800 opacity-90 py-2 px-8",
           isTop ? "" : " shadow-xl"
         )}
       >

@@ -2,9 +2,15 @@ import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <div id="projects" className="flex flex-col gap-8 pt-12 border-t">
-      <div className="flex flex-col gap-2">
-        <h2 className="text-3xl font-semibold">Projects</h2>
+    <div id="projects" className="w-full border-t">
+      <div className="max-w-7xl mx-auto py-20 md:px-8">
+        <h2 className="text-2xl md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+          Projects
+        </h2>
+        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+          I am always looking for new projects to work on, so feel free to reach
+          out to me if you have any ideas.
+        </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center mt-4 gap-x-4 gap-y-16">
         <ProjectCard

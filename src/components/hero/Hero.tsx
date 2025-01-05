@@ -4,11 +4,13 @@ import { TextGenerateEffect } from "../ui/text-generate-effect";
 import {
   faGithub,
   faLinkedinIn,
+  faMarkdown,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ImagesSlider } from "../ui/image-slider";
 import { motion } from "framer-motion";
+import { HoverBorderGradient } from "../ui/timeline";
 
 const images = [
   "/images/slider/mt_fuji.png",
@@ -46,24 +48,24 @@ export function Hero() {
               <h1 className="flex flex-col items-center md:items-stretch">
                 <TextGenerateEffect
                   wordClassNames="text-lg md:text-3xl text-neutral-100"
-                  words={"Hi, I'm HaRuki Kuriwada 🙂"}
+                  words={"Hi, I'm HaRuki Kuriwada. 🙂"}
                   delay={0}
                   customDelay={0.15}
                 />
                 <TextGenerateEffect
                   wordClassNames="text-3xl md:text-5xl text-neutral-100 font-bold"
-                  words={"Software Engineer."}
+                  words={"Software Engineer"}
                   delay={700}
                   customDelay={0.15}
                 />
               </h1>
             </div>
             {/* Social media */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col md:flex-row items-center gap-12 mt-4">
               <div
                 role="list"
                 aria-label="my soical media account links"
-                className={`flex gap-4 items-center text-white mt-4`}
+                className="flex gap-4 items-center text-white"
               >
                 <button
                   aria-roledescription="this is my GitHub account URL."
@@ -108,6 +110,13 @@ export function Hero() {
                   />
                 </button>
               </div>
+              {/* <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              >
+                <span>Download My Resume</span>
+              </HoverBorderGradient> */}
             </div>
           </div>
         </div>

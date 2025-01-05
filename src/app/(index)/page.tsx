@@ -1,7 +1,8 @@
 import { Hero } from "@/components/hero/Hero";
 import { About } from "@/components/about/About";
-import Projects from "@/components/projectCard/Project";
+import Projects from "@/components/projects/Projects";
 import { Header } from "@/components/header/Header";
+import { Logs } from "@/components/logs/Logs";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <div className="flex flex-col px-14 md:px-18 lg:px-24 xl:px-36 gap-24 ">
           <About />
           <Projects />
+          <Logs />
         </div>
       </div>
     </>

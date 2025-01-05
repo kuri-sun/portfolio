@@ -16,7 +16,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <PinContainer title={href} href={href}>
-      <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]">
+      <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[18rem] h-[18rem]">
         <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
           {title}
         </h3>
