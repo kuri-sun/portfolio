@@ -9,9 +9,13 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 flex-none w-full mx-auto bg-white z-20 dark:bg-neutral-800">
-      <nav className="flex flex-row items-center justify-center md:justify-between py-2 px-14 md:px-18 lg:px-24 xl:px-36">
-        <div className="hidden md:flex flex-row items-center gap-4 ">
+    <div
+      className={
+        "sticky z-20 top-[8px] w-full max-w-[1337px] transition-all duration-300 ease-in-out px-6 lg:px-16 xl:px-28"
+      }
+    >
+      <div className="relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-neutral-100 text-black dark:text-white dark:bg-gray-800 shadow-xl py-2 px-8">
+        <div className="hidden sm:flex flex-row items-center gap-4 ">
           <a
             href="/"
             className="text-xl font-semibold text-gray-600 dark:text-neutral-100"
@@ -37,7 +41,7 @@ export function Header() {
             />
           </svg>
         </button>
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 }
