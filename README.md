@@ -1,32 +1,16 @@
 # Customizable Portfolio
 
-<p align="left">
-  <img src="https://github.com/kuri-sun/customizable-portfolio/assets/62743644/ca047077-f3e7-41f3-a5bb-4cb6d398f5b4" alt="nextjs" width="40" height="40"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
-  <img src="https://github.com/kuri-sun/customizable-portfolio/assets/62743644/7990baf8-9382-4d8c-bc56-54669bb3b0f7" alt="tailwind" width="40" height="40"/>
-  <img src="https://github.com/kuri-sun/customizable-portfolio/assets/62743644/f57c1133-380b-41c8-8a77-5253e59d8656" alt="html" width="40" height="40"/>
-  <img src="https://github.com/kuri-sun/customizable-portfolio/assets/62743644/019d0338-9f2c-4beb-9391-d7bc19368428" alt="css" width="40" height="40"/>
-</p>
-
-Next.js to populate the portfolio, and styling up with Tailwind.
-Linked this GitHub repository with Vercel to configure deploy automation.
+NextJS to populate the portfolio, and styling up with Tailwind.
+This GitHub repository is with Vercel to configure and deploy automation.
 
 <br/>
 
 ## Leveraged Tech Stack
 
 - Next.js
-- React
-- HTML
-- CSS3
-- Tailwind
+- TailwindCSS
 - Vercel
 
-## Features
-
-**📱 Fully Responsive**
-
-**🎨 Tailwind CSS**
 
 ## 🛠 Setup instruction
 
