@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -6,10 +7,18 @@ export function About() {
   return (
     <div
       id="home"
-      className={`flex w-full items-center md:items-start flex-col  gap-8 pt-12 border-t`}
+      className={`flex w-full items-center md:items-start flex-col gap-8 pt-12 border-t`}
     >
-      <div className="flex flex-col gap-2">
-        <h2 className="text-3xl font-semibold">About</h2>
+      <div className="flex flex-row gap-8 items-center">
+        <h2 className="text-3xl font-semibold">{"About me"}</h2>
+        {/* Avator */}
+        <Image
+          src={"/images/me.jpg"}
+          width={100}
+          height={100}
+          className="w-[100px] h-[100px] rounded-full border-4 border-gray"
+          alt="my portfolio (my face image)"
+        />
       </div>
       <div className="gap-4 text-xl font-normal ">
         I studied Electrical Engineering at{" "}
@@ -52,6 +61,11 @@ export function About() {
         Machine Learning.
       </div>
       {/* TODO: picture slider here */}
+      {/* <div className="w-full flex justify-center items-center">
+        <div className="w-[300px]">
+          <ImagesSlider images={images} />
+        </div>
+      </div> */}
     </div>
   );
 }

@@ -1,6 +1,23 @@
 "use client";
 
+import React from "react";
+import { twMerge } from "tailwind-merge";
+
 export function Header() {
+  const [isTop, setIsTop] = React.useState(true);
+
+  window.onscroll = function () {
+    var body = document.body; //IE 'quirks'
+    var doc = document.documentElement; //IE with doctype
+    doc = doc.clientHeight ? doc : body;
+
+    if (doc.scrollTop == 0) {
+      setIsTop(true);
+    } else if (isTop) {
+      setIsTop(false);
+    }
+  };
+
   const onClickLightDarkMode = () => {
     const html = document.querySelector("html");
     if (html) {
@@ -10,17 +27,23 @@ export function Header() {
 
   return (
     <div
-      className={
-        "sticky z-20 top-[8px] w-full max-w-[1337px] transition-all duration-300 ease-in-out px-6 lg:px-16 xl:px-28"
-      }
+      className={twMerge(
+        "z-[100] w-full max-w-[1337px] transition-all duration-1000 px-6 lg:px-16 xl:px-28",
+        isTop ? "top-[16px]" : "sticky top-[8px]"
+      )}
     >
-      <div className="relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-neutral-100 text-black dark:text-white dark:bg-gray-800 shadow-xl py-2 px-8">
+      <div
+        className={twMerge(
+          "relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-white text-black dark:text-white dark:bg-gray-800 py-2 px-8",
+          isTop ? "" : " shadow-xl"
+        )}
+      >
         <div className="hidden sm:flex flex-row items-center gap-4 ">
           <a
             href="/"
             className="text-xl font-semibold text-gray-600 dark:text-neutral-100"
           >
-            HaRuki K.
+            HaRuki Kuriwada
           </a>
         </div>
         {/* light/dark mode */}
