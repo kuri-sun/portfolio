@@ -1,22 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
 export function Header() {
   const [isTop, setIsTop] = React.useState(true);
 
-  window.onscroll = function () {
-    var body = document.body; //IE 'quirks'
-    var doc = document.documentElement; //IE with doctype
-    doc = doc.clientHeight ? doc : body;
+  useEffect(() => {
+    window.onscroll = function () {
+      var body = document.body; //IE 'quirks'
+      var doc = document.documentElement; //IE with doctype
+      doc = doc.clientHeight ? doc : body;
 
-    if (doc.scrollTop == 0) {
-      setIsTop(true);
-    } else if (isTop) {
-      setIsTop(false);
-    }
-  };
+      if (doc.scrollTop == 0) {
+        setIsTop(true);
+      } else if (isTop) {
+        setIsTop(false);
+      }
+    };
+
+    return () => {
+      window.onscroll = null;
+    };
+  }, []);
 
   const onClickLightDarkMode = () => {
     const html = document.querySelector("html");
