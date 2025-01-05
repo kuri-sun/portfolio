@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <div id="projects" className="flex flex-col gap-8">
+    <div id="projects" className="flex flex-col gap-8 pt-12 border-t">
       <div className="flex flex-col gap-2">
         <h2 className="text-3xl font-semibold">Projects</h2>
       </div>

@@ -6,12 +6,12 @@ export function About() {
   return (
     <div
       id="home"
-      className={`flex w-full items-center md:items-start flex-col  gap-8`}
+      className={`flex w-full items-center md:items-start flex-col  gap-8 pt-12 border-t`}
     >
       <div className="flex flex-col gap-2">
         <h2 className="text-3xl font-semibold">About</h2>
       </div>
-      <div className="gap-4 text-lg font-normal ">
+      <div className="gap-4 text-xl font-normal ">
         I studied Electrical Engineering at{" "}
         <Link
           href="https://www.iwate-u.ac.jp/"

@@ -21,7 +21,7 @@ export default function ProjectCard({
           {title}
         </h3>
         <div className="text-base !m-0 !p-0 font-normal">
-          <span className="text-gray-400">{description}</span>
+          <span className="text-gray-300">{description}</span>
         </div>
         <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-white via-gray-500 to-blue-500">
           {image && (
