@@ -25,7 +25,7 @@ export function Hero() {
             <TextGenerateEffect
               wordClassNames="text-4xl text-[#025ed6] md:text-white font-bold"
               containerClassName="md:bg-[#025ed6] px-2 py-1 w-fit"
-              words={"Front End Developer"}
+              words={"Software Engineer"}
               delay={700}
               customDelay={0.15}
             />
@@ -43,7 +43,7 @@ export function Hero() {
           {/* Description */}
           <TextGenerateEffect
             words={
-              "Having professional experience in frontend and backend application development with 4 AWS Cloud Certifications. \nCombining all this knowledge, I can tackle problems from various perspectives."
+              "Hi, I'm HaRuki Kuriwada. I'm always passianate about learning knowledge and creating something new. My current boom is in AI 🙂"
             }
             wordClassNames="text-xl font-normal text-gray-600"
             delay={1500}
