@@ -16,7 +16,7 @@ export function Logs() {
       ),
     },
     {
-      title: "2024 September",
+      title: "2024 Sep.",
       content: (
         <div>
           <div className="mt-4 mb-8">
@@ -49,7 +49,7 @@ export function Logs() {
       ),
     },
     {
-      title: "2024 June",
+      title: "2024 Jun.",
       content: (
         <div>
           <div className="mt-4 mb-8">
@@ -71,7 +71,7 @@ export function Logs() {
       ),
     },
     {
-      title: "Changelog",
+      title: "~2024",
       content: (
         <div>
           <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">

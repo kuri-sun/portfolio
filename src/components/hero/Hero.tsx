@@ -10,7 +10,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ImagesSlider } from "../ui/image-slider";
 import { motion } from "framer-motion";
-import { HoverBorderGradient } from "../ui/timeline";
 
 const images = [
   "/images/slider/mt_fuji.png",
@@ -74,7 +73,7 @@ export function Hero() {
                   }}
                 >
                   <FontAwesomeIcon
-                    size="2xl"
+                    size="3x"
                     className=" hover:scale-110 cursor-pointer transition duration-100"
                     icon={faGithub}
                     aria-label="A GitHub icon nested within the button"
@@ -90,7 +89,7 @@ export function Hero() {
                   }}
                 >
                   <FontAwesomeIcon
-                    size="2xl"
+                    size="3x"
                     className="hover:scale-110 cursor-pointer transition duration-100"
                     icon={faLinkedinIn}
                     aria-label="A LinkedIn icon nested within the button"
@@ -103,7 +102,7 @@ export function Hero() {
                   }}
                 >
                   <FontAwesomeIcon
-                    size="2xl"
+                    size="3x"
                     className="hover:scale-110 cursor-pointer transition duration-100"
                     icon={faXTwitter}
                     aria-label="A X icon nested within the button"

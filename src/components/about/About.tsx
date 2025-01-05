@@ -14,7 +14,7 @@ export function About() {
       className={`flex w-full items-center md:items-start flex-col gap-8 pt-12 border-t md:px-8`}
     >
       <div className="flex flex-col items-center justify-center w-full">
-        <h2 className="w-full text-2xl md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+        <h2 className="w-full text-2xl md:text-4xl mb-4 text-black dark:text-white">
           About Me
         </h2>
         {/* Avator */}
