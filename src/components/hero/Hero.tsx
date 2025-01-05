@@ -1,35 +1,36 @@
 "use client";
 import React from "react";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
+import {
+  faGithub,
+  faLinkedinIn,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function Hero() {
   return (
     <div
       id="home"
-      className={`flex w-full items-center md:items-start flex-col text-white mt-16`}
+      className={`flex w-full items-center md:items-start flex-col  mt-16`}
     >
-      {/* <CustomBackground /> */}
       <div className="flex flex-col w-full items-center md:items-stretch gap-8 md:gap-0">
-        <div className="flex flex-col md:flex-row items-center justify-between text-white gap-8 md:gap-0">
-          <div className="flex flex-col items-center md:items-stretch">
+        <div className="flex flex-col md:flex-row items-center justify-between  gap-8 md:gap-0">
+          <h1 className="flex flex-col items-center md:items-stretch">
             <TextGenerateEffect
-              wordClassNames="text-4xl text-black font-bold text-gray-600"
-              containerClassName="md:bg-white px-2 py-1"
+              wordClassNames="text-lg md:text-3xl text-gray-600 dark:text-neutral-100"
               words={"Hi, I'm HaRuki Kuriwada. 🙂"}
               delay={0}
               customDelay={0.15}
             />
             <TextGenerateEffect
-              wordClassNames="text-4xl text-[#025ed6] md:text-white font-bold"
-              containerClassName="md:bg-[#025ed6] px-2 py-1 w-fit"
+              wordClassNames="text-xl md:text-3xl text-[#025ed6] font-bold"
               words={"Software Engineer"}
               delay={700}
               customDelay={0.15}
             />
-          </div>
+          </h1>
           {/* Avator */}
           <Image
             src={"/images/avatar.png"}
@@ -44,7 +45,7 @@ export function Hero() {
           <div
             role="list"
             aria-label="my soical media account links"
-            className={`flex gap-4 items-center text-black mt-4`}
+            className={`flex gap-4 items-center text-black dark:text-white mt-4`}
           >
             <button
               aria-roledescription="this is my GitHub account URL."
@@ -57,7 +58,6 @@ export function Hero() {
                 className=" hover:scale-110 cursor-pointer transition duration-100"
                 icon={faGithub}
                 aria-label="A GitHub icon nested within the button"
-                color={`${"black"}`}
               />
             </button>
             <button
@@ -74,7 +74,22 @@ export function Hero() {
                 className="hover:scale-110 cursor-pointer transition duration-100"
                 icon={faLinkedinIn}
                 aria-label="A LinkedIn icon nested within the button"
-                color={`#0a66c2`}
+              />
+            </button>
+            <button
+              aria-roledescription="this is my X account URL."
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/in/harukikuriwada/",
+                  "_blank"
+                );
+              }}
+            >
+              <FontAwesomeIcon
+                size="2xl"
+                className="hover:scale-110 cursor-pointer transition duration-100"
+                icon={faXTwitter}
+                aria-label="A X icon nested within the button"
               />
             </button>
           </div>

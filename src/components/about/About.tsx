@@ -6,16 +6,18 @@ export function About() {
   return (
     <div
       id="home"
-      className={`flex w-full items-center md:items-start flex-col text-white gap-8`}
+      className={`flex w-full items-center md:items-start flex-col  gap-8`}
     >
       <div className="flex flex-col gap-2">
-        <h2 className="text-3xl text-[#025ed6] font-bold">History</h2>
+        <h2 className="text-3xl font-semibold">About</h2>
       </div>
-      <div className="gap-4 text-lg font-normal text-gray-600">
+      <div className="gap-4 text-lg font-normal ">
         I studied Electrical Engineering at{" "}
         <Link
           href="https://www.iwate-u.ac.jp/"
-          className="font-semibold text-indigo-500"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-indigo-500 underline hover:opacity-80"
         >
           Iwate University
         </Link>{" "}
@@ -24,7 +26,9 @@ export function About() {
         startups, including{" "}
         <Link
           href="https://nextui.org/"
-          className="font-semibold text-indigo-500"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-indigo-500 underline hover:opacity-80"
         >
           NextUI
         </Link>{" "}
@@ -35,7 +39,9 @@ export function About() {
         at{" "}
         <Link
           href="https://hennge.com/"
-          className="font-semibold text-indigo-500"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-indigo-500 underline hover:opacity-80"
         >
           HENNGE
         </Link>
@@ -45,6 +51,7 @@ export function About() {
         In my free time, I go hiking 🥾. Nowadays, I am learning Python and
         Machine Learning.
       </div>
+      {/* TODO: picture slider here */}
     </div>
   );
 }
