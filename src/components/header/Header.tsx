@@ -34,7 +34,7 @@ export function Header() {
   return (
     <div
       className={twMerge(
-        "z-[100] w-full max-w-[1337px] transition-all duration-1000 px-6 lg:px-16 xl:px-28",
+        "z-[100] w-full max-w-[1337px] transition-all duration-600 opacity-80 px-6 lg:px-16 xl:px-28",
         isTop ? "top-[16px]" : "sticky top-[8px]"
       )}
     >
@@ -47,7 +47,7 @@ export function Header() {
         <div className="hidden sm:flex flex-row items-center gap-4 ">
           <a
             href="/"
-            className="text-xl font-semibold text-gray-600 dark:text-neutral-100"
+            className="text-xl font-semibold text-black dark:text-neutral-100 opacity-100"
           >
             HaRuki Kuriwada
           </a>

@@ -10,7 +10,7 @@ export function About() {
       className={`flex w-full items-center md:items-start flex-col gap-8 pt-12 border-t`}
     >
       <div className="flex flex-row gap-8 items-center">
-        <h2 className="text-3xl font-semibold">{"About me"}</h2>
+        <h2 className="text-3xl font-semibold">{"About Me ->"}</h2>
         {/* Avator */}
         <Image
           src={"/images/me.jpg"}
@@ -57,15 +57,9 @@ export function About() {
         .
         <br />
         <br />
-        In my free time, I go hiking 🥾. Nowadays, I am learning Python and
-        Machine Learning.
+        In my free time, I cook 🧑‍🍳 or go hiking 🥾. Nowadays, I am learning
+        Python and Machine Learning.
       </div>
-      {/* TODO: picture slider here */}
-      {/* <div className="w-full flex justify-center items-center">
-        <div className="w-[300px]">
-          <ImagesSlider images={images} />
-        </div>
-      </div> */}
     </div>
   );
 }
