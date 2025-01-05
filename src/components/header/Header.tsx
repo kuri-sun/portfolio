@@ -34,7 +34,7 @@ export function Header() {
   return (
     <div
       className={twMerge(
-        "z-[100] w-full max-w-[1337px] transition-all duration-600 opacity-80 px-6 lg:px-16 xl:px-28",
+        "z-[100] w-full transition-all duration-1000 px-14 md:px-18 lg:px-24 xl:px-36",
         isTop ? "top-[16px]" : "sticky top-[8px]"
       )}
     >
