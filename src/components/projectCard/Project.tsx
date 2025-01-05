@@ -10,7 +10,7 @@ export default function Projects() {
         <ProjectCard
           title={"Next UI"}
           description={
-            "Participated in YC Summar batch 2024. NextUI is a UI library for React that helps you build beautiful and accessible user interfaces."
+            "NextUI is a UI library for React that helps you build beautiful and accessible user interfaces."
           }
           href={"nextui.org"}
           image="/images/nextui.png"

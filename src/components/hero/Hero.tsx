@@ -12,13 +12,13 @@ export function Hero() {
       className={`flex w-full items-center md:items-start flex-col text-white mt-16`}
     >
       {/* <CustomBackground /> */}
-      <div className="flex flex-col">
-        <div className="flex flex-col md:flex-row items-center justify-between text-white ">
-          <div className="flex flex-col">
+      <div className="flex flex-col w-full items-center md:items-stretch gap-8 md:gap-0">
+        <div className="flex flex-col md:flex-row items-center justify-between text-white gap-8 md:gap-0">
+          <div className="flex flex-col items-center md:items-stretch">
             <TextGenerateEffect
               wordClassNames="text-4xl text-black font-bold text-gray-600"
               containerClassName="md:bg-white px-2 py-1"
-              words={"Hi, I'm Haruki Kuriwada."}
+              words={"Hi, I'm HaRuki Kuriwada. 🙂"}
               delay={0}
               customDelay={0.15}
             />
@@ -35,20 +35,11 @@ export function Hero() {
             src={"/images/avatar.png"}
             width={200}
             height={200}
-            className="rounded-full"
+            className="rounded-full border-4 border-gray"
             alt="my portfolio avatar"
           />
         </div>
         <div className="flex flex-col gap-4">
-          {/* Description */}
-          <TextGenerateEffect
-            words={
-              "Hi, I'm HaRuki Kuriwada. I'm always passianate about learning knowledge and creating something new. My current boom is in AI 🙂"
-            }
-            wordClassNames="text-xl font-normal text-gray-600"
-            delay={1500}
-            customDelay={0.1}
-          />
           {/* Social media */}
           <div
             role="list"
