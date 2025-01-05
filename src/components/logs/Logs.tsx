@@ -16,10 +16,14 @@ export function Logs() {
       ),
     },
     {
-      title: "2024 Sep.",
+      title: "2024",
       content: (
         <div>
           <div className="mt-4 mb-8">
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ I skydrived from 4,000 meters above the ground with my
+              coworker/friend.
+            </div>
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
               ✅ I climbed Mt. Fuji(3,776 m = 12,388 feet) with my college
               friends.
@@ -27,6 +31,9 @@ export function Logs() {
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
               ✅ I bungee jumped from 100 meters above the ground with my
               coworkers/friends.
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Benchpress 100kg(220lbs) for 1 rep.
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -44,24 +51,16 @@ export function Logs() {
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "2024 Jun.",
-      content: (
-        <div>
-          <div className="mt-4 mb-8">
-            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ I skydrived from 4,000 meters above the ground with my
-              coworker/friend.
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
             <Image
               src="/images/slider/skydiving.png"
-              alt="hero template"
+              alt="the photo of me skydiving"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="/images/muscle.jpg"
+              alt="the photo of me flexing my muscle against the gym mirror"
               width={500}
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
@@ -74,10 +73,10 @@ export function Logs() {
       title: "~2024",
       content: (
         <div>
-          <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
+          <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             After I guaraduated from the university at 2021, moved to Vancouver,
-            Canada, and started working as a Software Engineer. 🇨🇦 <br />
-            <div className="mt-4 mb-8">
+            Canada, and started working as a Software Engineer. 🇨🇦
+            {/* <div className="mt-4">
               <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
                 ✅ AWS Certified SysOps Administrator - Associate
               </div>
@@ -96,11 +95,18 @@ export function Logs() {
               <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
                 ✅ 硬筆書写技能検定 初段
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/images/aws-certification.png"
+              src="/images/fieldshare_me.jpg"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="/images/mt_cypress.jpg"
               alt="hero template"
               width={500}
               height={500}
@@ -118,8 +124,8 @@ export function Logs() {
           My Logs
         </h2>
         <div className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I will highlight someof major challenges and achievements I faced in
-          my life.
+          Here is the section where I write down my logs. (More of my personal
+          life)
         </div>
       </div>
 

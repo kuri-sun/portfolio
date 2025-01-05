@@ -15,7 +15,7 @@ export default function Home() {
         <div className="flex flex-col px-14 md:px-18 lg:px-24 xl:px-36 gap-24 ">
           <About />
           <Projects />
-          <Logs />
+          {/* <Logs /> */}
         </div>
       </div>
     </>
