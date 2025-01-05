@@ -97,10 +97,7 @@ export function Hero() {
                 <button
                   aria-roledescription="this is my X account URL."
                   onClick={() => {
-                    window.open(
-                      "https://www.linkedin.com/in/harukikuriwada/",
-                      "_blank"
-                    );
+                    window.open("https://x.com/HK88395", "_blank");
                   }}
                 >
                   <FontAwesomeIcon
