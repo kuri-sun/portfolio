@@ -12,17 +12,18 @@ import { motion } from "framer-motion";
 
 const images = [
   "/images/slider/mt_fuji.png",
-  "/images/slider/skydiving.png",
   "/images/slider/mt_iwate.png",
-  "/images/slider/garic_toast.png",
   "/images/slider/bekeyashiki.png",
   "/images/slider/kurobe_dam.png",
+  "/images/slider/garic_toast.png",
+  "/images/slider/skydiving.png",
+  "/images/slider/hakuba.png",
   "/images/slider/fire_celebration.png",
 ];
 
 export function Hero() {
   return (
-    <ImagesSlider className="h-[42rem]" images={images}>
+    <ImagesSlider className="h-[40rem]" images={images}>
       <motion.div
         initial={{
           opacity: 0,
