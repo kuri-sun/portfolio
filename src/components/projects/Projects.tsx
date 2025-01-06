@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
+// import ProjectCard from "../ui/card";
 import { HoverEffectCard } from "../ui/hover-efffect-card";
 
 export default function Projects() {
@@ -33,6 +34,16 @@ export default function Projects() {
       </div>
       <div className="w-full mx-auto md:px-6">
         <HoverEffectCard items={projects} />
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 justify-center">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              title={project.title}
+              description={project.description}
+              href={project.link}
+            />
+          ))}
+        </div> */}
       </div>
     </div>
   );
