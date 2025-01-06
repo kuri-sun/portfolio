@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { LinkPreview } from "../ui/link-preview";
 import { useTranslation } from "react-i18next";
 

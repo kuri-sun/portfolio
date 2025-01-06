@@ -77,7 +77,10 @@ function MobileHeader({ className = "" }) {
   return (
     <>
       <div
-        className={twMerge("fixed left-4 bottom-4 z-[100] w-full", className)}
+        className={twMerge(
+          "fixed left-4 bottom-4 z-[100] w-full  text-black dark:text-white ",
+          className
+        )}
       >
         <FloatingDockMobile items={links} />
       </div>
