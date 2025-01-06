@@ -47,7 +47,7 @@ export const HoverEffectCard = ({
             <AnimatePresence>
               {hoveredIndex === idx && (
                 <motion.span
-                  className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-100/[0.8] block rounded-3xl"
+                  className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-700/[0.8] block rounded-3xl"
                   layoutId="hoverBackground"
                   initial={{ opacity: 0 }}
                   animate={{
@@ -64,17 +64,6 @@ export const HoverEffectCard = ({
             <Card>
               <CardTitle>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
-              <div className="flex w-full rounded-lg bg-gradient-to-br mt-4 from-white via-gray-500 to-blue-500">
-                {item.image && (
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={300}
-                    height={300}
-                    className="opacity-50 w-full h-[200px] object-cover object-center rounded-lg"
-                  />
-                )}
-              </div>
             </Card>
           </Link>
         </FollowerPointerCard>
@@ -82,7 +71,6 @@ export const HoverEffectCard = ({
     </div>
   );
 };
-
 export const Card = ({
   className,
   children,
@@ -93,11 +81,13 @@ export const Card = ({
   return (
     <div
       className={twMerge(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden border border-transparent dark:border-white/[0.2] border-gray-800 relative z-20",
         className
       )}
     >
-      <div className="relative h-full z-50">{children}</div>
+      <div className="relative z-50">
+        <div className="p-2">{children}</div>
+      </div>
     </div>
   );
 };
@@ -109,12 +99,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4
-      className={twMerge(
-        "text-zinc-100 font-bold tracking-wide mt-4",
-        className
-      )}
-    >
+    <h4 className={twMerge("text-xl font-bold tracking-wide ", className)}>
       {children}
     </h4>
   );
@@ -129,7 +114,7 @@ export const CardDescription = ({
   return (
     <p
       className={twMerge(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "text-base mt-2 tracking-wide leading-relaxed text-sm",
         className
       )}
     >

@@ -7,6 +7,18 @@ export function Header() {
   const [isTop, setIsTop] = React.useState(true);
 
   useEffect(() => {
+    // dark/light
+    const html = document.querySelector("html");
+    if (html) {
+      const isDark = localStorage.getItem("dark");
+      if (isDark) {
+        html.classList.add("dark");
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    // Header position
     window.onscroll = function () {
       var body = document.body; //IE 'quirks'
       var doc = document.documentElement; //IE with doctype
@@ -28,6 +40,10 @@ export function Header() {
     const html = document.querySelector("html");
     if (html) {
       html.classList.toggle("dark");
+      localStorage.setItem(
+        "dark",
+        html.classList.contains("dark") ? "dark" : ""
+      );
     }
   };
 

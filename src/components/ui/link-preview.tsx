@@ -99,7 +99,7 @@ export const LinkPreview = ({
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
-          className={twMerge("text-black dark:text-white", className)}
+          className={twMerge(className)}
           target="_blank"
           rel="noopener noreferrer"
           href={url}
