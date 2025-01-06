@@ -1,0 +1,15 @@
+{
+  "Hi, I'm HaRuki Kuriwada.": "どうも、栗和田玄紀です。 🙂",
+  "About Me": "自己紹介",
+  "I studied Electrical Engineering at ": "",
+  "Iwate University": "岩手大学",
+  " while playing Division 1 soccer. Right after college, I moved to Canada, and had been working as a Software Engineer over 3 years at several startups, including": "で電気工学を専攻し、大学時代は体育会系サッカー部に所属していました。卒業後、カナダに渡り、いくつかのスタートアップ企業で3年以上ソフトウェアエンジニアとして働いていました🇨🇦。",
+  " which participated in ": "という、",
+  " summer batch 2024. ": "のsummer batch 2024に参加していたサンフランシスコのスタートアップなどで経験を積みました。",
+  "Afterwards, I came back to Japan and working for ": "",
+  " from April 2024.": "というCloud Security Softwareの会社で、2024年4月から働いています。",
+  "In my free time, I cook or go hiking. Nowadays, I am learning Python and Machine Learning.": "趣味は料理 🧑‍🍳 とハイキング 🥾 です。最近はPythonと機械学習を勉強しています。",
+  "Projects": "プロジェクト",
+  "NextUI is a UI library for React that helps you build beautiful and accessible user interfaces.": "NextUIは、美しいUIを構築するのに役立つReact用のUIライブラリです。(直訳です😓)",
+  "SanS is a UI library for boosting your Svelte projects with modular UI components built on Tailwind CSS.": "SanSは、Tailwind CSSで構築されたモジュラーなUIコンポーネントで、Svelteプロジェクトを強化するためのUIライブラリです。(直訳です😓)"
+}

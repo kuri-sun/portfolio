@@ -3,16 +3,19 @@
 import Image from "next/image";
 import React from "react";
 import { LinkPreview } from "../ui/link-preview";
+import { useTranslation } from "react-i18next";
 
 export function About() {
+  const { t } = useTranslation();
+
   return (
     <div
       id="home"
       className={`flex w-full items-center md:items-start flex-col gap-8 pt-12 border-t md:px-8`}
     >
-      <div className="flex flex-col items-center justify-center w-full">
-        <h2 className="w-full text-2xl md:text-4xl mb-4 text-black dark:text-white">
-          About Me
+      <div className="flex flex-col items-center gap-8 mb-8 justify-center w-full">
+        <h2 className="w-full text-2xl md:text-4xl text-black dark:text-white">
+          {t("About Me")}
         </h2>
         {/* Avator */}
         {/* <Lens hovering={hovering} setHovering={setHovering}> */}
@@ -26,45 +29,45 @@ export function About() {
         {/* </Lens> */}
       </div>
       <div className="gap-4 text-md md:text-lg font-normal ">
-        I studied Electrical Engineering at{" "}
+        {t("I studied Electrical Engineering at ")}
         <LinkPreview
           url="https://www.iwate-u.ac.jp/index.html"
           className="font-semibold text-indigo-500 underline hover:opacity-80"
         >
-          Iwate University
-        </LinkPreview>{" "}
-        while playing Division 1 soccer. Right after college, I moved to Canada,
-        and had been working as a Software Engineer over 3 years at several
-        startups, including{" "}
+          {t("Iwate University")}
+        </LinkPreview>
+        {t(
+          " while playing Division 1 soccer. Right after college, I moved to Canada, and had been working as a Software Engineer over 3 years at several startups, including"
+        )}
         <LinkPreview
           url="https://nextui.org/"
           className="font-semibold text-indigo-500 underline hover:opacity-80"
         >
           NextUI
-        </LinkPreview>{" "}
-        which participated in{" "}
+        </LinkPreview>
+        {t(" which participated in ")}
         <LinkPreview
           url="https://www.ycombinator.com/"
           className="font-semibold text-indigo-500 underline hover:opacity-80"
         >
           YC
-        </LinkPreview>{" "}
-        summer batch 2024.
+        </LinkPreview>
+        {t(" summer batch 2024. ")}
         <br />
         <br />
-        Afterwards, I came back to Japan and working on Cloud Security Software
-        at{" "}
+        {t("Afterwards, I came back to Japan and working for ")}
         <LinkPreview
           url="https://hennge.com/"
           className="font-semibold text-indigo-500 underline hover:opacity-80"
         >
           HENNGE
         </LinkPreview>
-        .
+        {t(" from April 2024.")}
         <br />
         <br />
-        In my free time, I cook 🧑‍🍳 or go hiking 🥾. Nowadays, I am learning
-        Python and Machine Learning.
+        {t(
+          "In my free time, I cook or go hiking. Nowadays, I am learning Python and Machine Learning."
+        )}
       </div>
     </div>
   );
