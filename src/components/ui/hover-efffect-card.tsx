@@ -4,9 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-import Image from "next/image";
 import { FollowerPointerCard, TitleComponent } from "./following-pointer";
-import { LinkPreview } from "./link-preview";
+import { useTranslation } from "react-i18next";
 
 export const HoverEffectCard = ({
   items,
@@ -20,6 +19,7 @@ export const HoverEffectCard = ({
   }[];
   className?: string;
 }) => {
+  const { t } = useTranslation();
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -32,9 +32,7 @@ export const HoverEffectCard = ({
       {items.map((item, idx) => (
         <FollowerPointerCard
           key={item?.link}
-          title={
-            <TitleComponent title={"You can click to go to the website 🚀"} />
-          }
+          title={<TitleComponent title={t("Click to see more details 🚀")} />}
         >
           <Link
             href={item?.link}
@@ -82,7 +80,7 @@ export const Card = ({
   return (
     <div
       className={twMerge(
-        "rounded-2xl h-full w-full p-4 overflow-hidden border border-transparent dark:border-white/[0.2] border-gray-800 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden border-transparent dark:border-white/[0.2] border-gray-800 relative z-20",
         className
       )}
     >

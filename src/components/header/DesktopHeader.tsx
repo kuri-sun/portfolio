@@ -106,7 +106,7 @@ function DesktopHeader({ className = "" }) {
     >
       <div
         className={twMerge(
-          "relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-white text-black dark:text-white dark:bg-neutral-800 opacity-90 py-2 px-8",
+          "relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-white text-black dark:text-white dark:bg-neutral-800 py-2 px-8",
           isTop ? "" : "shadow-xl"
         )}
       >

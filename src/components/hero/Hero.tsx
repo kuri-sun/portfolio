@@ -1,16 +1,11 @@
 "use client";
 
 import React from "react";
-import {
-  faGithub,
-  faLinkedinIn,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ImagesSlider } from "../ui/image-slider";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { Button } from "../ui/button";
 
 const images = [
   "/images/slider/mt_fuji.png",
@@ -59,6 +54,14 @@ function Hero() {
                   />
                 </h1>
               </div>
+              <Button
+                as="a"
+                borderRadius="2.75rem"
+                className="text-neutral-100 text-xl font-bold bg-gray-600"
+                href="mailto:harukikuriwada@gmail.com"
+              >
+                {t("Work with Him")}
+              </Button>
             </div>
           </div>
         </motion.div>
