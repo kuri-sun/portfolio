@@ -29,6 +29,7 @@ export function About() {
         {/* </Lens> */}
       </div>
       <div className="gap-4 text-md md:text-lg font-normal ">
+        {t("I'm Ruki from Japan. ")}
         {t("I studied Electrical Engineering at ")}
         <LinkPreview
           url="https://www.iwate-u.ac.jp/index.html"
