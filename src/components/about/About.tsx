@@ -3,11 +3,8 @@
 import Image from "next/image";
 import React from "react";
 import { LinkPreview } from "../ui/link-preview";
-import { Lens } from "../ui/lens";
 
 export function About() {
-  const [hovering, setHovering] = React.useState(false);
-
   return (
     <div
       id="home"
