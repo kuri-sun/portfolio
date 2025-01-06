@@ -52,7 +52,7 @@ export function Hero() {
                   customDelay={0.15}
                 />
                 <TextGenerateEffect
-                  wordClassNames="text-3xl md:text-5xl text-neutral-100 font-bold"
+                  wordClassNames="text-3xl md:text-6xl text-neutral-100 font-bold"
                   words={"Software Engineer"}
                   delay={700}
                   customDelay={0.15}
