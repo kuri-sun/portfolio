@@ -54,14 +54,14 @@ function Hero() {
                   />
                 </h1>
               </div>
-              <Button
+              {/* <Button
                 as="a"
                 borderRadius="2.75rem"
                 className="text-neutral-100 text-xl font-bold bg-gray-600"
                 href="mailto:harukikuriwada@gmail.com"
               >
                 {t("Work with Him")}
-              </Button>
+              </Button> */}
             </div>
           </div>
         </motion.div>
