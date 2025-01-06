@@ -11,8 +11,8 @@ import {
   IconHome,
 } from "@tabler/icons-react";
 import { FloatingDockDesktop } from "../ui/floating-dock";
-import { LightIcon } from "../ui/lightIcon";
-import { LangIcon } from "../ui/langIcon";
+import { LightIcon } from "../ui/icons/lightIcon";
+import { LangIcon } from "../ui/icons/langIcon";
 
 function DesktopHeader({ className = "" }) {
   const [isTop, setIsTop] = React.useState(true);
@@ -64,11 +64,6 @@ function DesktopHeader({ className = "" }) {
   };
 
   const links = [
-    {
-      title: "Home",
-      icon: <IconHome className="h-full w-full" />,
-      onClick: () => (window.location.href = "/"),
-    },
     {
       title: "LinkedIn",
       icon: <IconBrandLinkedin className="h-full w-full" />,

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 import { FollowerPointerCard, TitleComponent } from "./following-pointer";
+import { LinkPreview } from "./link-preview";
 
 export const HoverEffectCard = ({
   items,

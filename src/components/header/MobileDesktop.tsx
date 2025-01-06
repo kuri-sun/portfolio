@@ -10,9 +10,9 @@ import {
   IconBrandX,
   IconHome,
 } from "@tabler/icons-react";
-import { FloatingDockDesktop, FloatingDockMobile } from "../ui/floating-dock";
-import { LightIcon } from "../ui/lightIcon";
-import { LangIcon } from "../ui/langIcon";
+import { FloatingDockMobile } from "../ui/floating-dock";
+import { LightIcon } from "../ui/icons/lightIcon";
+import { LangIcon } from "../ui/icons/langIcon";
 
 function MobileHeader({ className = "" }) {
   const onToggleLanguageClick = (newLocale: "en" | "ja") => {
@@ -42,11 +42,6 @@ function MobileHeader({ className = "" }) {
   };
 
   const links = [
-    {
-      title: "Home",
-      icon: <IconHome className="h-full w-full" />,
-      onClick: () => (window.location.href = "/"),
-    },
     {
       title: "LinkedIn",
       icon: <IconBrandLinkedin className="h-full w-full" />,
@@ -80,9 +75,13 @@ function MobileHeader({ className = "" }) {
   ];
 
   return (
-    <div className={twMerge("fixed left-4 bottom-4 z-[100] w-full", className)}>
-      <FloatingDockMobile items={links} />
-    </div>
+    <>
+      <div
+        className={twMerge("fixed left-4 bottom-4 z-[100] w-full", className)}
+      >
+        <FloatingDockMobile items={links} />
+      </div>
+    </>
   );
 }
 

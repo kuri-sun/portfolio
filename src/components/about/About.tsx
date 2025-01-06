@@ -13,7 +13,7 @@ export function About() {
       id="home"
       className={`flex w-full items-center md:items-start flex-col gap-4 pt-12 border-t md:px-8`}
     >
-      <div className="flex flex-col items-center gap-8 justify-center w-full">
+      <div className="flex flex-col items-center gap-8 justify-center w-full mb-4">
         <h2 className="w-full text-2xl md:text-4xl text-black dark:text-white">
           {t("About Me")}
         </h2>
