@@ -1,4 +1,4 @@
-# Customizable Portfolio
+# Portfolio
 
 NextJS to populate the portfolio, and styling up with Tailwind.
 This GitHub repository is with Vercel to configure and deploy automation.
@@ -19,10 +19,10 @@ This GitHub repository is with Vercel to configure and deploy automation.
 
 1. Clone this repository.
 2. Installation: `pnpm install`
-3. In the project directory, you can run: `pnpm run dev`
+3. In the project directory, you can run: `pnpm dev`
 
-Open http://localhost:3000 in your browser and Boom!!
+Open http://localhost:3000 in your browser and ready to go 😄
 
 ## Support
 
-Leave a Star⭐ if you liked this!
+Leave a Star ⭐ if you liked this!
