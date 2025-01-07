@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { LinkPreview } from "../ui/link-preview";
 import { useTranslation } from "react-i18next";
+import { Button } from "../ui/button";
 
 export function About() {
   const { t } = useTranslation();
@@ -27,7 +28,7 @@ export function About() {
             {t("About Me")}
           </h2>
         </div>
-        <div className="gap-4 text-md md:text-lg font-normal ">
+        <div className="gap-4 text-md md:text-lg font-normal">
           {t("I'm Ruki from Japan. ")}
           {t("I studied Electrical Engineering at ")}
           <LinkPreview

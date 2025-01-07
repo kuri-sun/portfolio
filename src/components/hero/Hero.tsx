@@ -48,20 +48,12 @@ function Hero() {
                   </span>
                   <TextGenerateEffect
                     wordClassNames="text-3xl md:text-6xl text-neutral-100 font-bold"
-                    words={"Software Engineer"}
+                    words={"Software Engineer."}
                     delay={700}
                     customDelay={0.15}
                   />
                 </h1>
               </div>
-              {/* <Button
-                as="a"
-                borderRadius="2.75rem"
-                className="text-neutral-100 text-xl font-bold bg-gray-600"
-                href="mailto:harukikuriwada@gmail.com"
-              >
-                {t("Work with Him")}
-              </Button> */}
             </div>
           </div>
         </motion.div>

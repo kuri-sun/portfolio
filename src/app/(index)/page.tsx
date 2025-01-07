@@ -3,6 +3,7 @@ import { About } from "@/components/about/About";
 import Projects from "@/components/projects/Projects";
 import DesktopHeader from "@/components/header/DesktopHeader";
 import MobileHeader from "@/components/header/MobileDesktop";
+import Contact from "@/components/contact/Contact";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
           <About />
           <Projects />
           {/* <Logs /> */}
+          <Contact />
         </div>
       </div>
     </>

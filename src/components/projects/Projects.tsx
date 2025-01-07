@@ -10,7 +10,7 @@ export default function Projects() {
     {
       title: "NextUI",
       description: t(
-        "NextUI is a UI library for React that helps you build beautiful and accessible user interfaces."
+        "NextUI is a modern React UI component library trusted by developers worldwide, with over 1 million downloads on npm. Offering more than 50+ customizable and accessible components."
       ),
       link: "https://nextui.org",
       // image: "/images/nextui.png",
