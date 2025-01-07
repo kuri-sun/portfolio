@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { FollowerPointerCard, TitleComponent } from "./following-pointer";
 import { useTranslation } from "react-i18next";
 
 export const HoverEffectCard = ({
@@ -25,7 +24,7 @@ export const HoverEffectCard = ({
   return (
     <div
       className={twMerge(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 md:gap-y-0",
         className
       )}
     >
@@ -33,7 +32,7 @@ export const HoverEffectCard = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group block p-2 h-full w-full cursor-pointer"
+          className="relative group block md:p-2 h-full w-full cursor-pointer"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -75,7 +74,7 @@ export const Card = ({
   return (
     <div
       className={twMerge(
-        "rounded-2xl h-full w-full p-4 overflow-hidden border-transparent dark:border-white/[0.2] border-gray-800 relative z-20",
+        "rounded-2xl h-full w-full md:p-4 overflow-hidden border-transparent dark:border-white/[0.2] border-gray-800 relative z-20",
         className
       )}
     >

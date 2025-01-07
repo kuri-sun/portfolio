@@ -24,8 +24,8 @@ function Contact() {
           as="a"
           borderRadius="2.75rem"
           href="mailto:harukikuriwada@gmail.com"
-          containerClassName="w-48 h-12"
-          className="bg-white dark:bg-slate-900 text-base text-black font-normal dark:text-white border-neutral-200 dark:border-slate-800"
+          containerClassName="w-44 md:w-52 h-10 md:h-14"
+          className="bg-white dark:bg-slate-900 md:text-lg text-black dark:text-white border-neutral-200 dark:border-slate-800"
         >
           {t("Contact with Ruki")}
         </Button>

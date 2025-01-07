@@ -78,7 +78,7 @@ function MobileHeader({ className = "" }) {
     <>
       <div
         className={twMerge(
-          "fixed left-4 bottom-4 z-[100] w-full  text-black dark:text-white ",
+          "fixed left-4 bottom-6 z-[100] w-full  text-black dark:text-white ",
           className
         )}
       >

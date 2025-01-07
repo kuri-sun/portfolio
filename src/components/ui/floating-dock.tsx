@@ -63,10 +63,10 @@ export const FloatingDockMobile = ({
               >
                 <button
                   key={item.title}
-                  className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
+                  className="h-16 w-16 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
                   onClick={item.onClick}
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
+                  <div className="h-7 w-7">{item.icon}</div>
                 </button>
               </motion.div>
             ))}
@@ -75,9 +75,9 @@ export const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
+        className="h-16 w-16 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+        <IconLayoutNavbarCollapse className="h-7 w-7 text-neutral-500 dark:text-neutral-400" />
       </button>
     </div>
   );
