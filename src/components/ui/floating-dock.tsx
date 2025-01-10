@@ -11,23 +11,6 @@ import {
 import { useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-export const FloatingDock = ({
-  items,
-  desktopClassName,
-  mobileClassName,
-}: {
-  items: { title: string; icon: React.ReactNode; onClick: () => void }[];
-  desktopClassName?: string;
-  mobileClassName?: string;
-}) => {
-  return (
-    <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
-    </>
-  );
-};
-
 export const FloatingDockMobile = ({
   items,
   className,

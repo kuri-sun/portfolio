@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 import { LinkPreview } from "../ui/link-preview";
 import { useTranslation } from "react-i18next";
-import { Button } from "../ui/button";
 
 export function About() {
   const { t } = useTranslation();
@@ -21,7 +20,7 @@ export function About() {
         alt="my portfolio (my face image)"
       />
       <div
-        className={`flex w-full items-center md:items-start flex-col gap-4 pt-12 border-t md:px-8`}
+        className={`flex w-full items-center md:items-start flex-col gap-4 pt-12 border-t leading-loose md:px-8`}
       >
         <div className="flex flex-col items-center gap-8 justify-center w-full mb-4 sm:mb-8">
           <h2 className="w-full text-2xl md:text-4xl text-black dark:text-white">
@@ -44,7 +43,7 @@ export function About() {
             url="https://nextui.org/"
             className="font-semibold text-indigo-500 underline hover:opacity-80"
           >
-            NextUI
+            {t("NextUI (in San Francisco)")}
           </LinkPreview>
           {t(" which participated in ")}
           <LinkPreview
