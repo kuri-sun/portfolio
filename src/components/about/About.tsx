@@ -66,7 +66,7 @@ export function About() {
           <br />
           <br />
           {t(
-            "In my free time, I cook or go hiking. Nowadays, I am learning Python and Machine Learning."
+            "In my free time, I go hiking or go Onesen ♨. Nowadays, I am learning Machine Learning."
           )}
         </div>
       </div>
