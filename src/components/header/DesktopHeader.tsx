@@ -120,7 +120,7 @@ function DesktopHeader({ className = "" }) {
             href="/"
             className="text-xl font-semibold text-black dark:text-neutral-100 opacity-100"
           >
-            HaRuki Kuriwada
+            Haruki Kuriwada
           </a>
         </div>
         {/* center */}
