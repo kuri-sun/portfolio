@@ -50,7 +50,7 @@ export function About() {
             url="https://www.ycombinator.com/"
             className="font-semibold text-indigo-500 underline hover:opacity-80"
           >
-            YC
+            Y Combinator
           </LinkPreview>
           {t(" summer batch 2024. ")}
           <br />

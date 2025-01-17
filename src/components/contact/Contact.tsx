@@ -27,7 +27,7 @@ function Contact() {
           containerClassName="w-44 md:w-52 h-10 md:h-14"
           className="bg-white dark:bg-slate-900 md:text-lg text-black dark:text-white border-neutral-200 dark:border-slate-800"
         >
-          {t("Contact with Ruki")}
+          {t("Contact with Him")}
         </Button>
       </div>
     </footer>
