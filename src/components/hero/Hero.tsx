@@ -44,7 +44,7 @@ function Hero() {
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 mb-8">
                 <h1 className="flex flex-col items-center md:items-stretch">
                   <span className="font-bold text-lg md:text-3xl text-neutral-100">
-                    {t("Hi, I'm HaRuki Kuriwada.")}
+                    {t("Hi, I'm Haruki Kuriwada.")}
                   </span>
                   <TextGenerateEffect
                     wordClassNames="text-3xl md:text-6xl text-neutral-100 font-bold"

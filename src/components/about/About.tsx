@@ -28,7 +28,7 @@ export function About() {
           </h2>
         </div>
         <div className="gap-4 text-base font-normal">
-          {t("I'm Ruki from Japan. ")}
+          {t("I'm Haruki(Ruki) from Japan. ")}
           {t("I studied Electrical Engineering at ")}
           <LinkPreview
             url="https://www.iwate-u.ac.jp/index.html"
