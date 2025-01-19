@@ -131,7 +131,7 @@ export const ImagesSlider = ({
       {areImagesLoaded && overlay && (
         <div
           className={twMerge(
-            "absolute inset-0 bg-black/60 z-40",
+            "absolute inset-0 bg-black/60 z-40 mx-0 md:mx-18 lg:mx-24 xl:mx-36",
             overlayClassName
           )}
         />
@@ -146,7 +146,7 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}
-            className="image h-full w-full absolute inset-0 object-cover object-center"
+            className="image h-full w-full absolute inset-0 object-cover object-center px-0 md:px-18 lg:px-24 xl:px-36"
           />
         </AnimatePresence>
       )}

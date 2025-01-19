@@ -21,7 +21,7 @@ function Hero() {
 
   return (
     <>
-      <ImagesSlider className="h-[40rem]" images={images}>
+      <ImagesSlider className="h-[38rem]" images={images}>
         <motion.div
           initial={{
             opacity: 0,
@@ -38,20 +38,17 @@ function Hero() {
         >
           <div
             id="home"
-            className={`flex w-full items-center md:items-start flex-col  mt-16`}
+            className={`flex w-full items-center md:items-start flex-col mt-16 `}
           >
             <div className="flex flex-col w-full items-center md:items-stretch md:gap-0">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 mb-8">
-                <h1 className="flex flex-col items-center md:items-stretch">
+                <h1 className="flex flex-col gap-2 items-center md:items-stretch">
                   <span className="font-bold text-lg md:text-3xl text-neutral-100">
                     {t("Hi, I'm Haruki Kuriwada.")}
                   </span>
-                  <TextGenerateEffect
-                    wordClassNames="text-3xl md:text-6xl text-neutral-100 font-bold"
-                    words={"Software Engineer."}
-                    delay={700}
-                    customDelay={0.15}
-                  />
+                  <span className="text-3xl md:text-6xl text-neutral-100 font-bold">
+                    Software Engineer.
+                  </span>
                 </h1>
               </div>
             </div>
