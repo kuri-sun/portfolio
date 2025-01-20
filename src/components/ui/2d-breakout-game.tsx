@@ -191,6 +191,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
                 isGameOver = true;
               }
               setPoint((prevPoint) => prevPoint + 1);
+              return;
             }
           }
         }
