@@ -14,9 +14,10 @@ export function About() {
       {/* Avator */}
       <Image
         src={"/images/me3.png"}
+        priority={true}
         width={1000}
         height={1000}
-        className="absolute w-[150px] md:w-[180px] h-[150px] md:h-[180px] object-fit rounded-full border-[12px] border-white dark:border-neutral-800 top-[-6rem] md:top-[-4rem]"
+        className="flex lg:hidden absolute w-[150px] md:w-[180px] h-[150px] md:h-[180px] object-fit rounded-full border-[12px] border-white dark:border-neutral-800 top-[-6rem] md:top-[-4rem]"
         alt="my portfolio (my face image)"
       />
       <div

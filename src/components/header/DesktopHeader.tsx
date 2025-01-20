@@ -12,6 +12,7 @@ import {
 import { FloatingDockDesktop } from "../ui/floating-dock";
 import { LightIcon } from "../ui/icons/lightIcon";
 import { LangIcon } from "../ui/icons/langIcon";
+import Image from "next/image";
 
 function DesktopHeader({ className = "" }) {
   const [isTop, setIsTop] = React.useState(true);
@@ -98,7 +99,7 @@ function DesktopHeader({ className = "" }) {
   return (
     <div
       className={twMerge(
-        "hidden sm:flex z-[100] w-full transition-all duration-1000 px-14 md:px-18 lg:px-24 xl:px-36",
+        "hidden sm:flex z-[100] w-full px-14 md:px-18 lg:px-24 xl:px-36",
         isTop ? "top-[0px]" : "sticky top-[16px]",
         className
       )}
@@ -110,16 +111,12 @@ function DesktopHeader({ className = "" }) {
         )}
       >
         {/* right */}
-        <div
-          className={twMerge(
-            "hidden sm:flex flex-row items-center gap-4 transition-all duration-1000 "
-          )}
-        >
+        <div className={twMerge("hidden sm:flex flex-row items-center gap-4")}>
           <a
             href="/"
-            className="text-xl font-semibold text-black dark:text-neutral-100 opacity-100"
+            className="text-xl font-semibold text-black dark:text-neutral-100 opacity-100 inline-flex items-center gap-2"
           >
-            Haruki Kuriwada
+            Haruki Kuriwada{" "}
           </a>
         </div>
         {/* center */}

@@ -14,8 +14,64 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
   const [point, setPoint] = React.useState(0);
 
   const brickRowCount = 4;
-  const brickColumnCount = 9;
-  const maxScore = brickColumnCount * brickRowCount;
+  const brickColumnCount = 21;
+  const letters = [
+    // "H"
+    { x: 0, y: 0 },
+    { x: 0, y: 1 },
+    { x: 0, y: 2 },
+    { x: 0, y: 3 },
+    { x: 1, y: 2 },
+    { x: 2, y: 0 },
+    { x: 2, y: 1 },
+    { x: 2, y: 2 },
+    { x: 2, y: 3 },
+    // "A"
+    { x: 4, y: 0 },
+    { x: 4, y: 1 },
+    { x: 4, y: 2 },
+    { x: 4, y: 3 },
+    { x: 5, y: 0 },
+    { x: 5, y: 2 },
+    { x: 6, y: 0 },
+    { x: 6, y: 1 },
+    { x: 6, y: 2 },
+    { x: 6, y: 3 },
+    // "R"
+    { x: 8, y: 0 },
+    { x: 8, y: 1 },
+    { x: 8, y: 2 },
+    { x: 8, y: 3 },
+    { x: 9, y: 0 },
+    { x: 9, y: 2 },
+    { x: 10, y: 1 },
+    { x: 10, y: 3 },
+    // "U"
+    { x: 12, y: 0 },
+    { x: 12, y: 1 },
+    { x: 12, y: 2 },
+    { x: 12, y: 3 },
+    { x: 14, y: 0 },
+    { x: 14, y: 1 },
+    { x: 14, y: 2 },
+    { x: 14, y: 3 },
+    { x: 13, y: 3 },
+    // "K"
+    { x: 16, y: 0 },
+    { x: 16, y: 1 },
+    { x: 16, y: 2 },
+    { x: 16, y: 3 },
+    { x: 17, y: 1 },
+    { x: 18, y: 0 },
+    { x: 18, y: 2 },
+    { x: 18, y: 3 },
+    // "I"
+    { x: 20, y: 0 },
+    { x: 20, y: 1 },
+    { x: 20, y: 2 },
+    { x: 20, y: 3 },
+  ];
+  const maxScore = letters.length;
 
   // 2D breakout game ref: https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
   const startGame = () => {
@@ -23,14 +79,19 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
 
+    const randomVelocity = (min: number, max: number) => {
+      const value = Math.random() * (max - min) + min;
+      return Math.random() < 0.5 ? -value : value; // Randomize direction
+    };
+
     // Game variables
-    const canvasWidth = 900;
+    const canvasWidth = 1200;
     const canvasHeight = 350;
     let ballX = canvasWidth / 2;
     let ballY = canvasHeight - 30;
-    let ballDX = 2;
-    let ballDY = -2;
-    const ballRadius = 7;
+    let ballDX = randomVelocity(2, 4); // Random initial X velocity
+    let ballDY = randomVelocity(2, 4); // Random initial Y velocity
+    const ballRadius = 6;
 
     const paddleHeight = 10;
     const paddleWidth = 100;
@@ -39,18 +100,18 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     let leftPressed = false;
     let isGameOver = false;
 
-    const brickWidth = 70;
-    const brickHeight = 18;
-    const brickPaddingX = 20;
-    const brickPaddingY = 20;
+    const brickWidth = 35;
+    const brickHeight = 13;
+    const brickPaddingX = 10;
+    const brickPaddingY = 10;
     const brickOffsetTop = 30;
-    const brickOffsetLeft = 45;
+    const brickOffsetLeft = 150;
 
     const bricks: { x: number; y: number; status: number }[][] = [];
     for (let c = 0; c < brickColumnCount; c++) {
       bricks[c] = [];
       for (let r = 0; r < brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0, status: 1 };
+        bricks[c][r] = { x: 0, y: 0, status: 1 }; // Default brick initialization
       }
     }
 
@@ -90,20 +151,23 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     };
 
     const drawBricks = (ctx: CanvasRenderingContext2D) => {
-      for (let c = 0; c < brickColumnCount; c++) {
-        for (let r = 0; r < brickRowCount; r++) {
-          if (bricks[c][r].status === 1) {
-            const brickX = c * (brickWidth + brickPaddingX) + brickOffsetLeft;
-            const brickY = r * (brickHeight + brickPaddingY) + brickOffsetTop;
-            bricks[c][r].x = brickX;
-            bricks[c][r].y = brickY;
-            ctx.beginPath();
-            ctx.rect(brickX, brickY, brickWidth, brickHeight);
-            ctx.fillStyle = "#fff";
-            ctx.fill();
-            ctx.closePath();
-          }
+      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+      for (const { x, y } of letters) {
+        const brickX = x * (brickWidth + brickPaddingX) + brickOffsetLeft;
+        const brickY = y * (brickHeight + brickPaddingY) + brickOffsetTop;
+
+        // Update the bricks array with these positions
+        if (bricks[x] && bricks[x][y]) {
+          bricks[x][y].x = brickX;
+          bricks[x][y].y = brickY;
         }
+
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = bricks[x]?.[y]?.status === 1 ? "#fff" : "transparent";
+        ctx.fill();
+        ctx.closePath();
       }
     };
 
@@ -134,10 +198,11 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     };
 
     const draw = (ctx: CanvasRenderingContext2D) => {
-      if (gameState !== "playing" || isGameOver) return; // Stop drawing if the game is not active
-
       ctx.clearRect(0, 0, canvasWidth, canvasHeight);
       drawBricks(ctx);
+
+      if (gameState !== "playing" || isGameOver) return; // Stop drawing if the game is not active
+
       drawBall(ctx);
       drawPaddle(ctx);
 
@@ -175,9 +240,9 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
       ballY += ballDY;
 
       if (rightPressed && paddleX < canvasWidth - paddleWidth) {
-        paddleX += 7;
+        paddleX += 8;
       } else if (leftPressed && paddleX > 0) {
-        paddleX -= 7;
+        paddleX -= 8;
       }
 
       requestAnimationFrame(() => draw(ctx));
@@ -207,27 +272,26 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     <div className="font-mono text-white flex flex-col px-14 md:px-18 lg:px-24 xl:px-36 gap-24">
       <div
         className={twMerge(
-          "relative flex flex-col items-center bg-gradient-to-b from-black to-neutral-700 rounded-lg pt-8 pb-24 gap-4",
+          "relative flex flex-col items-center bg-gradient-to-b from-black to-neutral-700 rounded-lg py-8 gap-4",
           className
         )}
       >
-        {/* score */}
-        <p>
-          {t("You score:")} {point} pt
-        </p>
         {/* game */}
         <canvas
           ref={canvasRef}
-          width="900"
+          width="1200"
           height="350"
           className="border-white border-2 rounded-lg"
         />
-        <div className="absolute bottom-28 flex flex-col items-center gap-4">
-          {point === maxScore && (
-            <p className="text-yellow-600 font-bold text-2xl">
-              {t("Perfect Score!")}
-            </p>
-          )}
+        <div className="absolute bottom-24 flex flex-col items-center gap-4">
+          <p
+            className={twMerge(
+              "text-yellow-600 font-bold text-2xl",
+              gameState !== "game-over" ? "hidden" : ""
+            )}
+          >
+            {point === maxScore ? t("Perfect Score!") + " 🎉" : point + "pt"}
+          </p>
           <button
             className={twMerge(
               "font-light cursor-pointer cursor-pointer text-green-500 text-lg animate-pulse",

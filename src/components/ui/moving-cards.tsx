@@ -99,9 +99,9 @@ export const InfiniteMovingCards = ({
             <Image
               src={item.image}
               alt={item.name}
-              layout="fill"
-              objectFit="cover"
-              className="object-center"
+              fill
+              sizes="(max-width: 640px) 100vw, 640px"
+              className="object-cover object-center"
             />
           </li>
         ))}

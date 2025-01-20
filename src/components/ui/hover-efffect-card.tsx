@@ -1,69 +1,7 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
-import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { useTranslation } from "react-i18next";
 
-export const HoverEffectCard = ({
-  items,
-  className,
-}: {
-  items: {
-    title: string;
-    description: string;
-    link: string;
-    image?: string;
-  }[];
-  className?: string;
-}) => {
-  const { t } = useTranslation();
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  return (
-    <div
-      className={twMerge(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 md:gap-y-0",
-        className
-      )}
-    >
-      {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
-          className="relative group block md:p-2 h-full w-full cursor-pointer"
-          target="_blank"
-          rel="noopener noreferrer"
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-700/[0.8] block rounded-3xl"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
-          <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-          </Card>
-        </Link>
-      ))}
-    </div>
-  );
-};
 export const Card = ({
   className,
   children,

@@ -2,8 +2,8 @@
 
 import { useTranslation } from "react-i18next";
 // import ProjectCard from "../ui/card";
-import { HoverEffectCard } from "../ui/hover-efffect-card";
-import BreakoutGame2D from "../ui/2d-breakout-game";
+import { Card, CardDescription, CardTitle } from "../ui/hover-efffect-card";
+import Link from "next/link";
 
 export default function Projects() {
   const { t } = useTranslation();
@@ -34,17 +34,20 @@ export default function Projects() {
         </h2>
       </div>
       <div className="w-full mx-auto md:px-6">
-        <HoverEffectCard items={projects} />
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 justify-center">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              title={project.title}
-              description={project.description}
-              href={project.link}
-            />
-          ))}
-        </div> */}
+        {projects.map((item, idx) => (
+          <Link
+            href={item?.link}
+            key={item?.link}
+            className="relative group block md:p-2 h-full w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-slate-800 rounded-3xl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Card>
+              <CardTitle>{item.title}</CardTitle>
+              <CardDescription>{item.description}</CardDescription>
+            </Card>
+          </Link>
+        ))}
       </div>
     </div>
   );
