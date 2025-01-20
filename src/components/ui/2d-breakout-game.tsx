@@ -1,24 +1,20 @@
 "use client";
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import React, { useRef } from "react";
+import { t } from "i18next";
+import React from "react";
 import { twMerge } from "tailwind-merge";
 
 const BreakoutGame2D = ({ className = "" }: { className: string }) => {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
-  // const [gameState, setGameState] = React.useState<
-  //   "before-start" | "playing" | "game-over"
-  // >("before-start");
+  const [gameState, setGameState] = React.useState<
+    "before-start" | "playing" | "game-over"
+  >("before-start");
   const [gameKey, setGameKey] = React.useState(0);
   const [point, setPoint] = React.useState(0);
-  const gameState = useRef<"before-start" | "playing" | "game-over">(
-    "before-start"
-  );
 
-  // const brickRowCount = 4;
-  // const brickColumnCount = 9;
-  const brickRowCount = 1;
-  const brickColumnCount = 1;
+  const brickRowCount = 4;
+  const brickColumnCount = 9;
   const maxScore = brickColumnCount * brickRowCount;
 
   // 2D breakout game ref: https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -41,6 +37,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     let paddleX = (canvasWidth - paddleWidth) / 2;
     let rightPressed = false;
     let leftPressed = false;
+    let isGameOver = false;
 
     const brickWidth = 70;
     const brickHeight = 18;
@@ -126,7 +123,8 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
               ballDY = -ballDY; // Reverse vertical direction
               b.status = 0; // Mark brick as hit
               if (point + 1 === maxScore) {
-                gameState.current = "game-over";
+                setGameState("game-over");
+                isGameOver = true;
               }
               setPoint((prevPoint) => prevPoint + 1);
             }
@@ -136,7 +134,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     };
 
     const draw = (ctx: CanvasRenderingContext2D) => {
-      if (gameState.current !== "playing") return; // Stop drawing if the game is not active
+      if (gameState !== "playing" || isGameOver) return; // Stop drawing if the game is not active
 
       ctx.clearRect(0, 0, canvasWidth, canvasHeight);
       drawBricks(ctx);
@@ -168,7 +166,8 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
         ballDX = Math.sin(bounceAngle) * 4; // Adjust speed as needed
         ballDY = -Math.cos(bounceAngle) * 4; // Ensure it moves upward
       } else if (ballY + ballDY > canvasHeight - ballRadius) {
-        gameState.current = "game-over";
+        setGameState("game-over");
+        isGameOver = true;
         return;
       }
 
@@ -199,8 +198,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
   }, [gameKey]);
 
   const onStart = () => {
-    // setGameState("playing");
-    gameState.current = "playing";
+    setGameState("playing");
     setPoint(0);
     setGameKey((prevKey) => prevKey + 1); // Change the key to restart
   };
@@ -214,7 +212,9 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
         )}
       >
         {/* score */}
-        <p>You score: {point} pt</p>
+        <p>
+          {t("You score:")} {point} pt
+        </p>
         {/* game */}
         <canvas
           ref={canvasRef}
@@ -224,28 +224,30 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
         />
         <div className="absolute bottom-28 flex flex-col items-center gap-4">
           {point === maxScore && (
-            <p className="text-yellow-600 font-bold text-2xl">Perfect Score!</p>
+            <p className="text-yellow-600 font-bold text-2xl">
+              {t("Perfect Score!")}
+            </p>
           )}
           <button
             className={twMerge(
               "font-light cursor-pointer cursor-pointer text-green-500 text-lg animate-pulse",
-              gameState.current === "playing" ? "hidden" : ""
+              gameState === "playing" ? "hidden" : ""
             )}
             onClick={onStart}
           >
-            {gameState.current === "game-over"
-              ? "[ Start again? ]"
-              : "[ Start the Game ]"}
+            {gameState === "game-over"
+              ? t("[ Start again? ]")
+              : t("[ Start the Game ]")}
           </button>
           <p
             className={twMerge(
               "flex flex-row items-center text-sm",
-              gameState.current === "playing" ? "hidden" : ""
+              gameState === "playing" ? "hidden" : ""
             )}
           >
-            (Paddle) Press <IconArrowLeft size={20} className="mx-1" /> to move
-            left, and <IconArrowRight size={20} className="mx-1" /> to move
-            right
+            {t("(Paddle) Press")} <IconArrowLeft size={20} className="mx-1" />{" "}
+            {t("to move left, and")}{" "}
+            <IconArrowRight size={20} className="mx-1" /> {t("to move right")}
           </p>
         </div>
       </div>

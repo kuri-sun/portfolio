@@ -38,7 +38,7 @@ export function About() {
             {t("Iwate University")}
           </LinkPreview>
           {t(
-            " while playing Division 1 soccer. Right after college, I moved to Canada, and had been working as a Software Engineer over 3 years at several startups, including"
+            " while playing Division 1 soccer. Right after college, I moved to Canada, and had been working as a Software Engineer almost 3 years at several startups, including"
           )}
           <LinkPreview
             url="https://nextui.org/"

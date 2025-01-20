@@ -5,7 +5,7 @@
   "Iwate University": "岩手大学",
   "NextUI (in San Francisco)": "NextUI",
   "I'm Haruki(Ruki) from Japan. ": "ハルキと申します 🇯🇵。",
-  " while playing Division 1 soccer. Right after college, I moved to Canada, and had been working as a Software Engineer over 3 years at several startups, including": "で電気工学を専攻し、大学時代は体育会系サッカー部に所属していました。卒業後、カナダに渡り、いくつかのスタートアップ企業で3年以上ソフトウェアエンジニアとして働いていました。",
+  " while playing Division 1 soccer. Right after college, I moved to Canada, and had been working as a Software Engineer almost 3 years at several startups, including": "で電気工学を専攻し、大学時代は体育会系サッカー部に所属していました。卒業後、カナダに渡り、いくつかのスタートアップ企業で3年程ソフトウェアエンジニアとして働いていました。",
   " which participated in ": "という、",
   " summer batch 2024. ": "のsummer batch 2024に参加していたサンフランシスコのスタートアップなどで経験を積みました。",
   "Afterwards, I came back to Japan and working for ": "",
@@ -18,5 +18,12 @@
   "Contact": "コンタクト",
   "If you have some interesting idea, feel free to reach out to me.": "もし面白いアイデアがあれば、お気軽にご連絡ください。",
   "Contact with Him": "彼に連絡してみる",
-  "This website is Open Source 😊": "このウェブサイトはオープンソースです。"
+  "This website is Open Source 😊": "このウェブサイトはオープンソースです。",
+  "You score:": "あなたのスコア：",
+  "Perfect Score!": "パーフェクトです！",
+  "(Paddle) Press": "(パドル) ",
+  "[ Start again? ]": "[ もう一度始める？ ]",
+  "[ Start the Game ]": "[ ゲームを始める ]",
+  "to move left, and": "を押すと左に移動し、",
+  "to move right": "を押すと右に移動します。"
 }
