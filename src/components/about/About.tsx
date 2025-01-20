@@ -13,7 +13,7 @@ export function About() {
     <div id="home" className="relative flex flex-col items-center w-full">
       {/* Avator */}
       <div
-        className={`flex w-full items-center md:items-start flex-col gap-4 pt-12 border-t leading-loose md:px-8`}
+        className={`flex w-full items-center md:items-start flex-col gap-4 pt-12 leading-loose md:px-8`}
       >
         <div className="flex flex-row items-center gap-12 justify-start w-full mb-4 sm:mb-8">
           <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-white">
@@ -71,7 +71,7 @@ export function About() {
           )}
         </div>
       </div>
-      <div className="rounded-md hidden xl:flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden mt-8">
+      <div className="rounded-md hidden xl:flex flex-col antialiased bg-white dark:bg-neutral-800 items-center justify-center relative overflow-hidden mt-8">
         <InfiniteMovingCards items={images} direction="right" speed="slow" />
       </div>
     </div>
