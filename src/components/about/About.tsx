@@ -13,11 +13,10 @@ export function About() {
     <div id="home" className="relative flex flex-col items-center w-full">
       {/* Avator */}
       <Image
-        // src={"/images/me.jpg"}
         src={"/images/me3.png"}
         width={1000}
         height={1000}
-        className="flex lg:hidden absolute w-[150px] md:w-[200px] h-[150px] md:h-[200px] object-fit rounded-full border-[12px] border-white dark:border-neutral-800 top-[-6rem] md:top-[-6rem]"
+        className="absolute w-[150px] md:w-[180px] h-[150px] md:h-[180px] object-fit rounded-full border-[12px] border-white dark:border-neutral-800 top-[-6rem] md:top-[-4rem]"
         alt="my portfolio (my face image)"
       />
       <div

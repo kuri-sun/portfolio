@@ -207,7 +207,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     <div className="font-mono text-white flex flex-col px-14 md:px-18 lg:px-24 xl:px-36 gap-24">
       <div
         className={twMerge(
-          "relative flex flex-col items-center bg-gradient-to-b from-black to-neutral-700 rounded-lg pt-8 pb-12 gap-4",
+          "relative flex flex-col items-center bg-gradient-to-b from-black to-neutral-700 rounded-lg pt-8 pb-24 gap-4",
           className
         )}
       >
