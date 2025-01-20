@@ -3,6 +3,7 @@
 import { useTranslation } from "react-i18next";
 // import ProjectCard from "../ui/card";
 import { HoverEffectCard } from "../ui/hover-efffect-card";
+import BreakoutGame2D from "../ui/2d-breakout-game";
 
 export default function Projects() {
   const { t } = useTranslation();

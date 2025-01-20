@@ -4,8 +4,7 @@ import React from "react";
 import { ImagesSlider } from "../ui/image-slider";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
-import { Button } from "../ui/button";
+import BreakoutGame2D from "../ui/2d-breakout-game";
 
 const images = [
   "/images/slider/mt_fuji.png",
@@ -21,7 +20,8 @@ function Hero() {
 
   return (
     <>
-      <ImagesSlider className="h-[38rem]" images={images}>
+      <BreakoutGame2D className="hidden xl:flex" />
+      <ImagesSlider className="flex xl:hidden h-[38rem]" images={images}>
         <motion.div
           initial={{
             opacity: 0,

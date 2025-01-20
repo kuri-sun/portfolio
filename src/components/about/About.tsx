@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { LinkPreview } from "../ui/link-preview";
 import { useTranslation } from "react-i18next";
+import { InfiniteMovingCards } from "../ui/moving-cards";
 
 export function About() {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ export function About() {
         src={"/images/me3.png"}
         width={1000}
         height={1000}
-        className="absolute w-[150px] md:w-[200px] h-[150px] md:h-[200px] object-fit rounded-full border-[12px] border-white dark:border-neutral-800 top-[-6rem] md:top-[-6rem]"
+        className="flex lg:hidden absolute w-[150px] md:w-[200px] h-[150px] md:h-[200px] object-fit rounded-full border-[12px] border-white dark:border-neutral-800 top-[-6rem] md:top-[-6rem]"
         alt="my portfolio (my face image)"
       />
       <div
@@ -66,10 +67,40 @@ export function About() {
           <br />
           <br />
           {t(
-            "In my free time, I go hiking or go Onesen ♨. Nowadays, I am learning Machine Learning."
+            "In my free time, I go hiking or go Onsen ♨. Nowadays, I am learning Machine Learning."
           )}
         </div>
+      </div>
+      <div className="rounded-md hidden xl:flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden mt-8">
+        <InfiniteMovingCards items={images} direction="right" speed="slow" />
       </div>
     </div>
   );
 }
+
+const images = [
+  {
+    name: "Me opening my arms wide open while climbing Mt. Fuji",
+    image: "/images/slider/mt_fuji.png",
+  },
+  {
+    name: "Garic toast that I made",
+    image: "/images/slider/garic_toast.png",
+  },
+  {
+    name: "Made it to the top of Mt. Iwate during the winter! It was freezing cold!",
+    image: "/images/slider/mt_iwate.png",
+  },
+  {
+    name: "I skydived from 4,000m high in Saitama, Japan",
+    image: "/images/slider/skydiving.png",
+  },
+  {
+    name: "The picture when I did hiking with my family in Hakuba, Nagano, Japan. It was a beautiful day!",
+    image: "/images/slider/hakuba.png",
+  },
+  {
+    name: "The most famous dam in Japan, which is Kurobe Dam in Toyama, Japan.",
+    image: "/images/slider/kurobe_dam.png",
+  },
+];
