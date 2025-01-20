@@ -114,7 +114,7 @@ function DesktopHeader({ className = "" }) {
         <div className={twMerge("hidden sm:flex flex-row items-center gap-4")}>
           <a
             href="/"
-            className="text-xl font-semibold text-black dark:text-neutral-100 opacity-100 inline-flex items-center gap-2"
+            className="font-mono text-xl font-semibold text-black dark:text-neutral-100 opacity-100 inline-flex items-center gap-2"
           >
             Haruki Kuriwada{" "}
           </a>

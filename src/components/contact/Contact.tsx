@@ -10,7 +10,7 @@ function Contact() {
   return (
     <footer className="w-full border-t flex flex-col gap-8">
       <div className="max-w-7xl pt-12 md:px-8">
-        <h2 className="text-2xl md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+        <h2 className="font-mono text-2xl md:text-4xl mb-4 sm:mb-8 text-black dark:text-white max-w-4xl">
           {t("Contact")}
         </h2>
         <p>

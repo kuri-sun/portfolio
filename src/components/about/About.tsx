@@ -12,21 +12,21 @@ export function About() {
   return (
     <div id="home" className="relative flex flex-col items-center w-full">
       {/* Avator */}
-      <Image
-        src={"/images/me3.png"}
-        priority={true}
-        width={1000}
-        height={1000}
-        className="flex lg:hidden absolute w-[150px] md:w-[180px] h-[150px] md:h-[180px] object-fit rounded-full border-[12px] border-white dark:border-neutral-800 top-[-6rem] md:top-[-4rem]"
-        alt="my portfolio (my face image)"
-      />
       <div
         className={`flex w-full items-center md:items-start flex-col gap-4 pt-12 border-t leading-loose md:px-8`}
       >
-        <div className="flex flex-col items-center gap-8 justify-center w-full mb-4 sm:mb-8">
-          <h2 className="w-full text-2xl md:text-4xl text-black dark:text-white">
+        <div className="flex flex-row items-center gap-12 justify-start w-full mb-4 sm:mb-8">
+          <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-white">
             {t("About Me")}
           </h2>
+          <Image
+            src={"/images/me3.png"}
+            priority={true}
+            width={1000}
+            height={1000}
+            className="flex absolute lg:relative w-[150px] lg:w-[100px] h-[150px] lg:h-[100px] object-fit rounded-full border-[12px] lg:border-0 border-white dark:border-neutral-800 top-[-7rem] lg:top-0 left-[-1rem]"
+            alt="my portfolio (my face image)"
+          />
         </div>
         <div className="gap-4 text-base font-normal">
           {t("I'm Haruki(Ruki) from Japan. ")}
@@ -72,7 +72,7 @@ export function About() {
         </div>
       </div>
       <div className="rounded-md hidden xl:flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden mt-8">
-        <InfiniteMovingCards items={images} direction="right" speed="slow" />
+        {/* <InfiniteMovingCards items={images} direction="right" speed="slow" /> */}
       </div>
     </div>
   );

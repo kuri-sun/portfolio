@@ -85,12 +85,12 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     };
 
     // Game variables
-    const canvasWidth = 1200;
+    const canvasWidth = 1150;
     const canvasHeight = 350;
     let ballX = canvasWidth / 2;
     let ballY = canvasHeight - 30;
-    let ballDX = randomVelocity(2, 4); // Random initial X velocity
-    let ballDY = randomVelocity(2, 4); // Random initial Y velocity
+    let ballDX = randomVelocity(1, 2); // Reduced X velocity
+    let ballDY = randomVelocity(1, 2); // Reduced Y velocity
     const ballRadius = 6;
 
     const paddleHeight = 10;
@@ -103,9 +103,9 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     const brickWidth = 35;
     const brickHeight = 13;
     const brickPaddingX = 10;
-    const brickPaddingY = 10;
+    const brickPaddingY = 14;
     const brickOffsetTop = 30;
-    const brickOffsetLeft = 150;
+    const brickOffsetLeft = 110;
 
     const bricks: { x: number; y: number; status: number }[][] = [];
     for (let c = 0; c < brickColumnCount; c++) {
@@ -228,8 +228,8 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
         const maxBounceAngle = Math.PI / 3; // 60 degrees
         const bounceAngle = relativeHitPoint * maxBounceAngle;
 
-        ballDX = Math.sin(bounceAngle) * 4; // Adjust speed as needed
-        ballDY = -Math.cos(bounceAngle) * 4; // Ensure it moves upward
+        ballDX = Math.sin(bounceAngle) * 3; // Adjust speed as needed
+        ballDY = -Math.cos(bounceAngle) * 3; // Ensure it moves upward
       } else if (ballY + ballDY > canvasHeight - ballRadius) {
         setGameState("game-over");
         isGameOver = true;
@@ -269,7 +269,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
   };
 
   return (
-    <div className="font-mono text-white flex flex-col px-14 md:px-18 lg:px-24 xl:px-36 gap-24">
+    <div className="font-mono text-white flex flex-col px-4">
       <div
         className={twMerge(
           "relative flex flex-col items-center bg-gradient-to-b from-black to-neutral-700 rounded-lg py-8 gap-4",
@@ -279,7 +279,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
         {/* game */}
         <canvas
           ref={canvasRef}
-          width="1200"
+          width="1150"
           height="350"
           className="border-white border-2 rounded-lg"
         />
