@@ -72,7 +72,7 @@ export function About() {
         </div>
       </div>
       <div className="rounded-md hidden xl:flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden mt-8">
-        {/* <InfiniteMovingCards items={images} direction="right" speed="slow" /> */}
+        <InfiniteMovingCards items={images} direction="right" speed="slow" />
       </div>
     </div>
   );
