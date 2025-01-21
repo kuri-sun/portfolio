@@ -99,15 +99,13 @@ function DesktopHeader({ className = "" }) {
   return (
     <div
       className={twMerge(
-        "hidden sm:flex z-[100] w-full px-14 md:px-18 lg:px-24 xl:px-36",
-        isTop ? "top-[0px]" : "sticky top-[16px]",
+        "hidden sm:flex z-[100] w-full sticky top-0",
         className
       )}
     >
       <div
         className={twMerge(
-          "relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-white text-black dark:text-white dark:bg-neutral-800 py-2 px-8",
-          isTop ? "" : "shadow-xl"
+          "relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-white text-black dark:text-white dark:bg-neutral-800 py-2 w-full px-14 md:px-18 lg:px-24 xl:px-36 border-b"
         )}
       >
         {/* right */}
