@@ -44,7 +44,7 @@ export function About() {
             url="https://nextui.org/"
             className="font-semibold text-indigo-500 underline hover:opacity-80"
           >
-            {t("NextUI (in San Francisco)")}
+            {"NextUI"}
           </LinkPreview>
           {t(" which participated in ")}
           <LinkPreview
