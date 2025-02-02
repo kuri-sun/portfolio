@@ -16,14 +16,6 @@ export default function Projects() {
       link: "https://nextui.org",
       // image: "/images/nextui.png",
     },
-    // {
-    //   title: "SanS UI",
-    //   description: t(
-    //     "SanS is a UI library for boosting your Svelte projects with modular UI components built on Tailwind CSS."
-    //   ),
-    //   link: "https://sans-ui.org",
-    //   // image: "/images/sans-ui.png",
-    // },
   ];
 
   return (
