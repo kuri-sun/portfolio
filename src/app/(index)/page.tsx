@@ -5,7 +5,7 @@ import DesktopHeader from "@/components/header/DesktopHeader";
 import MobileHeader from "@/components/header/MobileDesktop";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
-import Logs from "@/components/logs/Logs";
+// import Logs from "@/components/logs/Logs";
 
 function Home() {
   return (

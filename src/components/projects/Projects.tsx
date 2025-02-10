@@ -9,9 +9,9 @@ export default function Projects() {
   const { t } = useTranslation();
   const projects = [
     {
-      title: "NextUI",
+      title: "HeroUI(NextUI)",
       description: t(
-        "NextUI is a modern React UI component library trusted by developers worldwide, with over 1 million downloads on npm. Offering more than 50+ customizable and accessible components."
+        "HeroUI(NextUI) is a modern React UI component library trusted by developers worldwide, with over 1 million downloads on npm. Offering more than 50+ customizable and accessible components."
       ),
       link: "https://nextui.org",
       // image: "/images/nextui.png",
