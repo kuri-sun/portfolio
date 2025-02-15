@@ -11,7 +11,7 @@ export default function Projects() {
     {
       title: "HeroUI(NextUI)",
       description: t(
-        "HeroUI(NextUI) is a modern React UI component library trusted by developers worldwide, with over 1 million downloads on npm. Offering more than 50+ customizable and accessible components."
+        "I participated in the HeroUI projects as a member when the company joined the Y Combinator 2024 batch. (over 1 million+ npm downloads)"
       ),
       link: "https://nextui.org",
       // image: "/images/nextui.png",
