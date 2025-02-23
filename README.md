@@ -22,7 +22,3 @@ This GitHub repository is with Vercel to configure and deploy automation.
 3. In the project directory, you can run: `pnpm dev`
 
 Open http://localhost:3000 in your browser and ready to go 😄
-
-## Support
-
-Leave a Star ⭐ if you liked this!
