@@ -17,8 +17,10 @@ export default function Projects() {
     },
     {
       title: "SanS UI",
-      description: t("My friend and I created a UI library for Svelte for learning experience!"),
-      link: "https://www.rukikuri-blog-app.com",
+      description: t(
+        "My friend and I created a UI library for Svelte for learning experience!"
+      ),
+      link: "https://www.sans-ui.org/",
     },
   ];
 
