@@ -14,7 +14,11 @@ export default function Projects() {
         "I participated in the HeroUI projects as a member when the company joined the Y Combinator 2024 batch. (over 1 million+ npm downloads)"
       ),
       link: "https://nextui.org",
-      // image: "/images/nextui.png",
+    },
+    {
+      title: "SanS UI",
+      description: t("My friend and I created a UI library for Svelte for learning experience!"),
+      link: "https://www.rukikuri-blog-app.com",
     },
   ];
 
