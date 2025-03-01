@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
-  speed = "fast",
+  speed = "slow",
   pauseOnHover = true,
   className,
 }: {
@@ -25,7 +25,7 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation();
-  }, [addAnimation]);
+  }, []);
 
   const [start, setStart] = useState(false);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -62,13 +62,13 @@ export const InfiniteMovingCards = ({
   };
   const getSpeed = () => {
     if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "180s");
-      }
+      // if (speed === "fast") {
+      // containerRef.current.style.setProperty("--animation-duration", "20s");
+      // } else if (speed === "normal") {
+      //   containerRef.current.style.setProperty("--animation-duration", "40s");
+      // } else {
+      containerRef.current.style.setProperty("--animation-duration", "180s");
+      // }
     }
   };
   return (
