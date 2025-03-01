@@ -17,10 +17,8 @@ export default function Projects() {
     },
     {
       title: "SanS UI",
-      description: t(
-        "My friend and I created a UI library for Svelte for learning experience!"
-      ),
-      link: "https://www.sans-ui.org/",
+      description: t("My friend and I are creating a UI library for Svelte 5"),
+      link: "https://github.com/sans-ui-org/sans-ui",
     },
   ];
 
