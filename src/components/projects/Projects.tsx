@@ -9,7 +9,7 @@ export default function Projects() {
   const { t } = useTranslation();
   const projects = [
     {
-      title: "HeroUI(NextUI)",
+      title: "NextUI",
       description: t(
         "I participated in the HeroUI projects as a member when the company joined the Y Combinator 2024 batch. (over 1 million+ npm downloads)"
       ),
@@ -30,7 +30,7 @@ export default function Projects() {
         </h2>
       </div>
       <div className="w-full mx-auto md:px-6">
-        {projects.map((item, idx) => (
+        {projects.map((item) => (
           <Link
             href={item?.link}
             key={item?.link}
