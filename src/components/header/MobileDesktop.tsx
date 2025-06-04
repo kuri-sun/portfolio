@@ -8,7 +8,6 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandX,
-  IconHome,
 } from "@tabler/icons-react";
 import { FloatingDockMobile } from "../ui/floating-dock";
 import { LightIcon } from "../ui/icons/lightIcon";
@@ -36,7 +35,7 @@ function MobileHeader({ className = "" }) {
       html.classList.toggle("dark");
       localStorage.setItem(
         "dark",
-        html.classList.contains("dark") ? "dark" : ""
+        html.classList.contains("dark") ? "dark" : "",
       );
     }
   };
@@ -47,11 +46,6 @@ function MobileHeader({ className = "" }) {
       icon: <IconBrandLinkedin className="h-full w-full" />,
       onClick: () =>
         window.open("https://www.linkedin.com/in/harukikuriwada/", "_blank"),
-    },
-    {
-      title: "Twitter",
-      icon: <IconBrandX className="h-full w-full" />,
-      onClick: () => window.open("https://x.com/HK88395", "_blank"),
     },
     {
       title: "GitHub",
@@ -79,7 +73,7 @@ function MobileHeader({ className = "" }) {
       <div
         className={twMerge(
           "fixed left-4 bottom-6 z-[100] w-full  text-black dark:text-white ",
-          className
+          className,
         )}
       >
         <FloatingDockMobile items={links} />

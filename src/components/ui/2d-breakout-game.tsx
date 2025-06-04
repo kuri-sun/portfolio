@@ -85,12 +85,12 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
     };
 
     // Game variables
-    const canvasWidth = 1000;
+    const canvasWidth = 962;
     const canvasHeight = 350;
     let ballX = canvasWidth / 2;
     let ballY = canvasHeight - 30;
-    let ballDX = randomVelocity(2, 2.5); // Reduced X velocity
-    let ballDY = randomVelocity(2, 2.5); // Reduced Y velocity
+    let ballDX = randomVelocity(1, 2); // Reduced X velocity
+    let ballDY = randomVelocity(1, 2); // Reduced Y velocity
     const ballRadius = 6;
 
     const paddleHeight = 10;
@@ -275,21 +275,21 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
       <div
         className={twMerge(
           "relative flex flex-col items-center bg-gradient-to-b from-black to-neutral-700 rounded-lg py-8 gap-4",
-          className
+          className,
         )}
       >
         {/* game */}
         <canvas
+          className="flex flex-row items-center border-2 border-white rounded"
           ref={canvasRef}
-          width="1000"
+          width="962"
           height="350"
-          className="border-white border-2 rounded-lg"
         />
         <div className="absolute bottom-24 flex flex-col items-center gap-4">
           <p
             className={twMerge(
               "text-yellow-600 font-bold text-2xl",
-              gameState !== "game-over" ? "hidden" : ""
+              gameState !== "game-over" ? "hidden" : "",
             )}
           >
             {point === maxScore ? t("Perfect Score!") + " 🎉" : point + "pt"}
@@ -297,7 +297,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
           <button
             className={twMerge(
               "font-light cursor-pointer cursor-pointer text-green-500 text-lg animate-pulse",
-              gameState === "playing" ? "hidden" : ""
+              gameState === "playing" ? "hidden" : "",
             )}
             onClick={onStart}
           >
@@ -308,7 +308,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
           <p
             className={twMerge(
               "flex flex-row items-center text-sm",
-              gameState === "playing" ? "hidden" : ""
+              gameState === "playing" ? "hidden" : "",
             )}
           >
             {t("(Paddle) Press")} <IconArrowLeft size={20} className="mx-1" />{" "}

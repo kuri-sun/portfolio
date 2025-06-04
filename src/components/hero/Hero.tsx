@@ -8,11 +8,9 @@ import BreakoutGame2D from "../ui/2d-breakout-game";
 
 const images = [
   "/images/slider/mt_fuji.png",
-  "/images/slider/garic_toast.png",
-  "/images/slider/mt_iwate.png",
   "/images/slider/skydiving.png",
-  "/images/slider/hakuba.png",
-  "/images/slider/kurobe_dam.png",
+  "/images/slider/fire_celebration.png",
+  "/images/slider/airsoft.jpg",
 ];
 
 function Hero() {
@@ -47,7 +45,7 @@ function Hero() {
                     {t("Hi, I'm Haruki Kuriwada.")}
                   </span>
                   <span className="text-3xl md:text-6xl text-neutral-100 font-bold">
-                    Software Engineer.
+                    [Who am I?]
                   </span>
                 </h1>
               </div>

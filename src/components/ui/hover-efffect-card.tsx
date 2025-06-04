@@ -13,7 +13,7 @@ export const Card = ({
     <div
       className={twMerge(
         "rounded-2xl h-full w-full md:p-4 overflow-hidden border-transparent dark:border-white/[0.2] border-gray-800 relative z-20",
-        className
+        className,
       )}
     >
       <div className="relative z-50">
@@ -45,8 +45,8 @@ export const CardDescription = ({
   return (
     <p
       className={twMerge(
-        "text-base mt-2 tracking-wide leading-relaxed text-sm",
-        className
+        "text-base mt-2 tracking-wide leading-relaxed",
+        className,
       )}
     >
       {children}

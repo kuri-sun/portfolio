@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 export const InfiniteMovingCards = ({
   items,
   direction = "left",
-  speed = "slow",
+  speed = "normal",
   pauseOnHover = true,
   className,
 }: {
@@ -50,33 +50,33 @@ export const InfiniteMovingCards = ({
       if (direction === "left") {
         containerRef.current.style.setProperty(
           "--animation-direction",
-          "forwards"
+          "forwards",
         );
       } else {
         containerRef.current.style.setProperty(
           "--animation-direction",
-          "reverse"
+          "reverse",
         );
       }
     }
   };
   const getSpeed = () => {
     if (containerRef.current) {
-      // if (speed === "fast") {
-      // containerRef.current.style.setProperty("--animation-duration", "20s");
-      // } else if (speed === "normal") {
-      //   containerRef.current.style.setProperty("--animation-duration", "40s");
-      // } else {
-      containerRef.current.style.setProperty("--animation-duration", "180s");
-      // }
+      if (speed === "fast") {
+        containerRef.current.style.setProperty("--animation-duration", "60s");
+      } else if (speed === "normal") {
+        containerRef.current.style.setProperty("--animation-duration", "100s");
+      } else {
+        containerRef.current.style.setProperty("--animation-duration", "180s");
+      }
     }
   };
   return (
     <div
       ref={containerRef}
       className={twMerge(
-        "scroller relative z-20 max-w-5xl 2xl:max-w-7xl  overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
-        className
+        "scroller relative z-20 max-w-7xl 2xl:max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        className,
       )}
     >
       <ul
@@ -84,12 +84,12 @@ export const InfiniteMovingCards = ({
         className={twMerge(
           " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
-          pauseOnHover && "hover:[animation-play-state:paused]"
+          pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="w-[350px] h-[500px] max-w-full relative rounded-2xl overflow-hidden"
+            className="w-[180px] h-[180px] md:w-[260px] md:h-[260px] max-w-full relative rounded-2xl overflow-hidden"
             style={{
               background:
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
