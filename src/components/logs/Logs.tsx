@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { InfiniteMovingCards } from "../ui/moving-cards";
+import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import { t } from "i18next";
 import { LinkPreview } from "../ui/link-preview";
 
