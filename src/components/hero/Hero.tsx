@@ -9,7 +9,7 @@ import BreakoutGame2D from "../ui/2d-breakout-game";
 const images = [
   "/images/slider/mt_fuji.png",
   "/images/slider/skydiving.png",
-  "/images/slider/fire_celebration.png",
+  "/images/slider/fire.png",
   "/images/slider/airsoft.jpg",
 ];
 
@@ -41,10 +41,10 @@ function Hero() {
             <div className="flex flex-col w-full items-center md:items-stretch md:gap-0">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 mb-8">
                 <h1 className="flex flex-col gap-2 items-center md:items-stretch">
-                  <span className="font-bold text-lg md:text-3xl text-neutral-100">
+                  <span className="font-bold text-xl md:text-3xl text-neutral-100">
                     {t("Hi, I'm Haruki Kuriwada.")}
                   </span>
-                  <span className="text-3xl md:text-6xl text-neutral-100 font-bold">
+                  <span className="text-4xl md:text-6xl text-neutral-100 font-bold">
                     [Who am I?]
                   </span>
                 </h1>

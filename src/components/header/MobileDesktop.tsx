@@ -4,11 +4,7 @@ import React, { useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import "../../i18/config";
 import i18n from "i18next";
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandX,
-} from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { FloatingDockMobile } from "../ui/floating-dock";
 import { LightIcon } from "../ui/icons/lightIcon";
 import { LangIcon } from "../ui/icons/langIcon";
@@ -16,6 +12,11 @@ import { LangIcon } from "../ui/icons/langIcon";
 function MobileHeader({ className = "" }) {
   const onToggleLanguageClick = (newLocale: "en" | "ja") => {
     i18n.changeLanguage(newLocale);
+    // update html lang attribute
+    const html = document.querySelector("html");
+    if (html) {
+      html.setAttribute("lang", newLocale);
+    }
   };
 
   useEffect(() => {

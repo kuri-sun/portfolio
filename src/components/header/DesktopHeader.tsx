@@ -4,11 +4,7 @@ import React, { useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import "../../i18/config";
 import i18n from "i18next";
-import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandX,
-} from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { FloatingDockDesktop } from "../ui/floating-dock";
 import { LightIcon } from "../ui/icons/lightIcon";
 import { LangIcon } from "../ui/icons/langIcon";
@@ -17,8 +13,12 @@ function DesktopHeader({ className = "" }) {
   const [isTop, setIsTop] = React.useState(true);
 
   const onToggleLanguageClick = (newLocale: "en" | "ja") => {
-    console.log("newLocale", newLocale);
     i18n.changeLanguage(newLocale);
+    // update html lang attribute
+    const html = document.querySelector("html");
+    if (html) {
+      html.setAttribute("lang", newLocale);
+    }
   };
 
   useEffect(() => {

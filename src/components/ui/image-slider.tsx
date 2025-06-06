@@ -21,23 +21,21 @@ export const ImagesSlider = ({
   direction?: "up" | "down";
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [loading, setLoading] = useState(false);
   const [loadedImages, setLoadedImages] = useState<string[]>([]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1,
     );
   };
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
+      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1,
     );
   };
 
   const loadImages = () => {
-    setLoading(true);
     const loadPromises = images.map((image) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
@@ -50,7 +48,6 @@ export const ImagesSlider = ({
     Promise.all(loadPromises)
       .then((loadedImages) => {
         setLoadedImages(loadedImages as string[]);
-        setLoading(false);
       })
       .catch((error) => console.error("Failed to load images", error));
   };
@@ -121,7 +118,7 @@ export const ImagesSlider = ({
     <div
       className={twMerge(
         "overflow-hidden h-full w-full relative flex items-center justify-center",
-        className
+        className,
       )}
       style={{
         perspective: "1000px",
@@ -132,7 +129,7 @@ export const ImagesSlider = ({
         <div
           className={twMerge(
             "absolute inset-0 bg-black/60 z-40 mx-0 md:mx-18 lg:mx-24 xl:mx-36",
-            overlayClassName
+            overlayClassName,
           )}
         />
       )}
@@ -146,7 +143,7 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}
-            className="image h-full w-full absolute inset-0 object-cover object-center px-0 md:px-18 lg:px-24 xl:px-36"
+            className="image h-full w-full absolute inset-0 object-contain px-0 md:px-18 lg:px-24 xl:px-36"
           />
         </AnimatePresence>
       )}
