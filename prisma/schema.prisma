@@ -1,16 +1,19 @@
+// Define database connection via the `DATABASE_URL` env var
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
+// Define custom output path for generated Prisma Client
 generator client {
   provider = "prisma-client-js"
 }
 
 model Visit {
   id        Int      @id @default(autoincrement())
-  userId    String
-  duration  Int      // seconds
+  userId    String   @unique
+  duration  Int      // in seconds
   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt @default(now())
 }
 

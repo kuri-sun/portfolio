@@ -14,7 +14,7 @@ function Home() {
     <>
       <DesktopHeader />
       <MobileHeader />
-      <VisitTracker userId="user-12345" />
+      <VisitTracker />
       <div
         className={`flex flex-col dark:bg-neutral-800 text-gray-600 dark:text-neutral-100`}
       >
