@@ -7,11 +7,15 @@ import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
 import Logs from "@/components/logs/Logs";
 import VisitTracker from "@/components/visit-track/VisitTracker";
+import { StickyBanner } from "@/components/ui/sticky-banner";
 import TotalTime from "@/components/visit-track/TotalTime";
 
 function Home() {
   return (
     <>
+      <StickyBanner className="bg-gradient-to-b from-blue-500 to-blue-600">
+        <TotalTime />
+      </StickyBanner>
       <DesktopHeader />
       <MobileHeader />
       <VisitTracker />

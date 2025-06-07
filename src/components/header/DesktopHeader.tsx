@@ -8,7 +8,6 @@ import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { FloatingDockDesktop } from "../ui/floating-dock";
 import { LightIcon } from "../ui/icons/lightIcon";
 import { LangIcon } from "../ui/icons/langIcon";
-import TotalTime from "../visit-track/TotalTime";
 
 function DesktopHeader({ className = "" }) {
   const [isTop, setIsTop] = React.useState(true);
@@ -100,7 +99,7 @@ function DesktopHeader({ className = "" }) {
     >
       <div
         className={twMerge(
-          "relative text-lg flex items-center justify-center sm:justify-between w-full rounded-lg bg-white text-black dark:text-white dark:bg-neutral-800 py-2 w-full px-14 md:px-18 lg:px-24 xl:px-36 border-b",
+          "relative text-lg flex items-center justify-center sm:justify-between w-full bg-white text-black dark:text-white dark:bg-neutral-800 h-[64px] py-2 px-14 md:px-18 lg:px-24 xl:px-36 border-b",
         )}
       >
         {/* right */}
@@ -111,7 +110,6 @@ function DesktopHeader({ className = "" }) {
           >
             Haruki Kuriwada{" "}
           </a>
-          <TotalTime />
         </div>
         {/* center */}
         <div className={"sm:flex"}>
