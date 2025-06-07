@@ -1,8 +1,7 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { Card, CardDescription, CardTitle } from "../ui/hover-efffect-card";
-import Link from "next/link";
+import { Card, CardDescription, CardTitle } from "../ui/card";
 
 export default function Projects() {
   const { t } = useTranslation();
@@ -10,38 +9,36 @@ export default function Projects() {
     {
       title: "NextUI",
       description: t(
-        "I participated in the HeroUI projects as a member when the company joined the Y Combinator 2024 batch. (over 1 million+ npm downloads)",
+        "Experienced a startup launch as a core member when the company joined the Y Combinator 2024 batch.",
       ),
       link: "https://nextui.org",
     },
     {
       title: "SanS UI",
       description: t("My friend and I are creating a UI library for Svelte 5"),
-      link: "https://github.com/sans-ui-org/sans-ui",
+      link: "https://www.sans-ui.org/",
     },
   ];
 
   return (
     <div id="projects" className="w-full border-t pb-12">
-      <div className="max-w-7xl pt-12 mb-4 sm:mb-8">
-        <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-white max-w-4xl">
+      <div className="max-w-7xl pt-12 mb-4 sm:mb-16">
+        <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-neutral-200 max-w-4xl">
           {t("Projects")}
         </h2>
       </div>
-      <div className="w-full flex flex-col gap-2 mx-auto">
+      <div className="w-full flex flex-col gap-4 mx-auto">
         {projects.map((item) => (
-          <Link
-            href={item?.link}
+          <div
             key={item?.link}
-            className="relative group block p-4 md:p-2 h-full w-full cursor-pointer transition-all duration-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-3xl"
-            target="_blank"
+            className="relative block p-4 md:p-2 h-full w-full cursor-pointer transition-all duration-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-3xl"
             rel="noopener noreferrer"
           >
             <Card>
-              <CardTitle>{item.title}</CardTitle>
+              <CardTitle url={item.link}>{item.title}</CardTitle>
               <CardDescription>{item.description}</CardDescription>
             </Card>
-          </Link>
+          </div>
         ))}
       </div>
     </div>

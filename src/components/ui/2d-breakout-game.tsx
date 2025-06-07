@@ -271,10 +271,10 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
   };
 
   return (
-    <div className="font-mono text-white flex flex-col px-14 md:px-18 lg:px-24 xl:px-36">
+    <div className="font-mono text-white flex flex-col">
       <div
         className={twMerge(
-          "relative flex flex-col items-center bg-gradient-to-b from-black to-neutral-700 rounded-lg py-8 gap-4",
+          "relative flex flex-col items-center bg-gradient-to-b from-black to-neutral-700 rounded-lg gap-4",
           className,
         )}
       >
@@ -285,7 +285,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
           width="962"
           height="350"
         />
-        <div className="absolute bottom-24 flex flex-col items-center gap-4">
+        <div className="absolute bottom-14 flex flex-col items-center gap-4">
           <p
             className={twMerge(
               "text-yellow-600 font-bold text-2xl",
@@ -296,7 +296,7 @@ const BreakoutGame2D = ({ className = "" }: { className: string }) => {
           </p>
           <button
             className={twMerge(
-              "font-light cursor-pointer cursor-pointer text-green-500 text-lg animate-pulse",
+              "font-light cursor-pointer text-green-500 text-lg animate-pulse",
               gameState === "playing" ? "hidden" : "",
             )}
             onClick={onStart}

@@ -1,6 +1,5 @@
 "use client";
 
-import { IconUser } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 
 export default function TotalTime() {
@@ -24,7 +23,6 @@ export default function TotalTime() {
         <strong>{total.uniqueVisitors} people</strong> visited this site for{" "}
         <strong>{total.totalHours} hours</strong> in total!
       </p>
-      <IconUser className="hidden md:flex h-6 w-6 text-white" />
       <p className="block md:hidden">
         So far <strong>{total.uniqueVisitors} people</strong> visited for{" "}
         <strong>{total.totalHours} hours</strong>! 🎉

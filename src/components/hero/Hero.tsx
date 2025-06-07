@@ -4,7 +4,6 @@ import React from "react";
 import { ImagesSlider } from "../ui/image-slider";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import BreakoutGame2D from "../ui/2d-breakout-game";
 
 const images = [
   "/images/slider/mt_fuji.png",
@@ -18,8 +17,7 @@ function Hero() {
 
   return (
     <>
-      <BreakoutGame2D className="hidden xl:flex" />
-      <ImagesSlider className="flex xl:hidden h-[38rem]" images={images}>
+      <ImagesSlider className="flex lg:hidden h-[38rem]" images={images}>
         <motion.div
           initial={{
             opacity: 0,
@@ -40,11 +38,11 @@ function Hero() {
           >
             <div className="flex flex-col w-full items-center md:items-stretch md:gap-0">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 mb-8">
-                <h1 className="flex flex-col gap-2 items-center md:items-stretch">
-                  <span className="font-bold text-xl md:text-3xl text-neutral-100">
+                <h1 className="flex flex-col gap-6 items-center md:items-stretch">
+                  <span className="font-bold text-3xl lg:text-4xl text-neutral-100">
                     {t("Hi, I'm Haruki Kuriwada.")}
                   </span>
-                  <span className="text-4xl md:text-6xl text-neutral-100 font-bold">
+                  <span className="text-center text-5xl md:text-6xl text-neutral-100 font-bold">
                     [Who am I?]
                   </span>
                 </h1>

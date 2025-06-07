@@ -15,7 +15,7 @@ export function About() {
         className={`flex w-full items-center md:items-start flex-col gap-4 pt-12 leading-loose`}
       >
         <div className="flex flex-row items-center gap-12 justify-start w-full mb-4 sm:mb-8">
-          <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-white">
+          <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-neutral-200">
             {t("About Me")}
           </h2>
           <Image
@@ -27,10 +27,10 @@ export function About() {
             alt="my portfolio (my face image)"
           />
         </div>
-        <div className="gap-4 text-base font-normal">
-          {t("I'm Ruki from Japan. ")}
+        <div className="gap-4 text-base font-normal leading-loose">
+          {t("I'm HaRuki from Japan. 🇯🇵")}
           <br />
-          {t("I studied Electrical Engineering at ")}
+          {t("I studied at ")}
           <LinkPreview
             url="https://www.iwate-u.ac.jp/index.html"
             className="font-semibold text-indigo-500 underline hover:opacity-80"
@@ -38,13 +38,13 @@ export function About() {
             {t("Iwate University")}
           </LinkPreview>
           {t(
-            " while playing Division 1 soccer. Right after college, I moved to Canada, and had been working as a Software Engineer almost 3 years at several startups, including ",
+            " while playing Division 1 soccer. After college, I moved to Canada, and had been working as a Software Engineer 3 years at several startups, including ",
           )}
           <LinkPreview
             url="https://nextui.org/"
             className="font-semibold text-indigo-500 underline hover:opacity-80"
           >
-            {"HeroUI(NextUI)"}
+            {"NextUI"}
           </LinkPreview>
           {t(" which participated in ")}
           <LinkPreview
@@ -53,20 +53,9 @@ export function About() {
           >
             Y Combinator
           </LinkPreview>
-          {t(" summer batch 2024. ")}
+          {t(" SB2024. ")}
           <br />
-          <br />
-          {t("Afterwards, I came back to Japan and working for ")}
-          <LinkPreview
-            url="https://hennge.com/"
-            className="font-semibold text-indigo-500 underline hover:opacity-80"
-          >
-            HENNGE
-          </LinkPreview>
-          {t(" from April 2024.")}
-          <br />
-          <br />
-          {t("In my free time, I go hiking or go Onsen.")}
+          {t("Now, I am back in Japan! 😊")}
         </div>
       </div>
     </div>

@@ -37,22 +37,16 @@ function Logs() {
               <div className="flex gap-3 items-start">
                 <span>☑️</span>
                 <p>
-                  {
-                    "I'm going to start mix martial arts training at a local dojo."
-                  }
+                  {"Going to start mix martial arts training at a local dojo."}
                 </p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>☑️</span>
-                <p>{"I'm going to learn Machine Learning with Python."}</p>
+                <p>{"Going to learn Machine Learning."}</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>☑️</span>
-                <p>
-                  {
-                    "I'm going to create a UI library for Svelte 5 with my friend."
-                  }
-                </p>
+                <p>{"Going to create a UI library for Svelte 5."}</p>
               </div>
             </div>
           </div>
@@ -70,24 +64,15 @@ function Logs() {
             <div className="mt-4 flex flex-col gap-2">
               <div className="flex gap-3 items-start">
                 <span>✅</span>
-                <p>
-                  Skydived from 4,000 meters above the ground with my
-                  coworker/friend.
-                </p>
+                <p>Skydived from 4,000 meters above the ground.</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>✅</span>
-                <p>
-                  Climbed Mt. Fuji(3,776 m = 12,388 feet) with my college
-                  friends.
-                </p>
+                <p>Climbed Mt. Fuji(3,776 m = 12,388 feet).</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>✅</span>
-                <p>
-                  Bungee jumped from 100 meters above the ground with my
-                  coworkers/friends.
-                </p>
+                <p>Bungee jumped from 100 meters above the ground.</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>✅</span>
@@ -112,7 +97,7 @@ function Logs() {
           <div className="flex flex-col gap-4 mt-2 mb-8 text-md text-neutral-700 dark:text-neutral-300">
             <p className="md:text-xl">
               I moved to Vancouver, and started working as a Software Engineer.
-              🇨🇦
+              🇨🇦🇺🇸
             </p>
             <div className="mt-4 flex flex-col gap-2">
               <div className="flex gap-3 items-start">
@@ -144,7 +129,7 @@ function Logs() {
   return (
     <div id="changelog" className="w-full border-t">
       <div className="max-w-7xl mx-auto pt-12">
-        <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-white">
+        <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-neutral-200">
           {t("Logs")}
         </h2>
       </div>
