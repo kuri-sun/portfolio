@@ -22,7 +22,7 @@ export default function Projects() {
 
   return (
     <div id="projects" className="w-full border-t pb-12">
-      <div className="max-w-7xl pt-12 mb-4 sm:mb-16">
+      <div className="max-w-7xl pt-12 mb-16">
         <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-neutral-200 max-w-4xl">
           {t("Projects")}
         </h2>
@@ -31,7 +31,7 @@ export default function Projects() {
         {projects.map((item) => (
           <div
             key={item?.link}
-            className="relative block p-4 md:p-2 h-full w-full cursor-pointer transition-all duration-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-3xl"
+            className="relative block p-4 h-full w-full cursor-pointer transition-all duration-400 hover:bg-gray-100 dark:hover:bg-slate-800 rounded-3xl"
             rel="noopener noreferrer"
           >
             <Card>

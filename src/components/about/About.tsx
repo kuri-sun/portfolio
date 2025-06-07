@@ -14,7 +14,7 @@ export function About() {
       <div
         className={`flex w-full items-center md:items-start flex-col gap-4 pt-12 leading-loose`}
       >
-        <div className="flex flex-row items-center gap-12 justify-start w-full mb-4 sm:mb-8">
+        <div className="flex flex-row items-center gap-12 justify-start w-full mb-10">
           <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-neutral-200">
             {t("About Me")}
           </h2>

@@ -19,9 +19,8 @@ export default function TotalTime() {
   return (
     <div className="flex items-center justify-center gap-4 text-base text-white">
       <p className="hidden md:block">
-        Thank you for visiting 🎉 So far{" "}
-        <strong>{total.uniqueVisitors} people</strong> visited this site for{" "}
-        <strong>{total.totalHours} hours</strong> in total!
+        So far <strong>{total.uniqueVisitors} people</strong> visited this site
+        for <strong>{total.totalHours} hours</strong> in total 🎉
       </p>
       <p className="block md:hidden">
         So far <strong>{total.uniqueVisitors} people</strong> visited for{" "}
