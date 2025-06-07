@@ -8,6 +8,7 @@ import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { FloatingDockDesktop } from "../ui/floating-dock";
 import { LightIcon } from "../ui/icons/lightIcon";
 import { LangIcon } from "../ui/icons/langIcon";
+import TotalTime from "../visit-track/TotalTime";
 
 function DesktopHeader({ className = "" }) {
   const [isTop, setIsTop] = React.useState(true);
@@ -110,6 +111,7 @@ function DesktopHeader({ className = "" }) {
           >
             Haruki Kuriwada{" "}
           </a>
+          <TotalTime />
         </div>
         {/* center */}
         <div className={"sm:flex"}>

@@ -1,0 +1,16 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Visit {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  duration  Int      // seconds
+  createdAt DateTime @default(now())
+}
+
