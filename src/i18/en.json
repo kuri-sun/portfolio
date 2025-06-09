@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About Me",
-    "content": "I'm HaRuki from Japan.<br/>I studied at <IwateLink>Iwate University</IwateLink> while playing Division 1 soccer. After college, I moved to Canada, and had been working as a Software Engineer for 3 years at several startups, such as <NextUILink>NextUI</NextUILink>.Now, I am back in Japan."
+    "content": "I'm HaRuki from Japan.<br/>I studied at <IwateLink>Iwate University</IwateLink> while playing Division 1 soccer. After college, I moved to Canada, and had been working as a Software Engineer for 3 years at several startups, such as <NextUILink>NextUI</NextUILink>. Now, I am back in Japan."
   },
   "project": {
     "title": "Projects",
