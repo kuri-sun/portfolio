@@ -3,8 +3,8 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
-import { t } from "i18next";
 import { LinkPreview } from "../ui/link-preview";
+import { useTranslation } from "react-i18next";
 
 const images2024 = [
   {
@@ -26,6 +26,8 @@ const images2024 = [
 ];
 
 function Logs() {
+  const { t } = useTranslation();
+
   const data = [
     {
       title: "2025",
