@@ -32,21 +32,19 @@ function Logs() {
       content: (
         <div>
           <div className="flex flex-col gap-4 mt-2 mb-8 text-md text-neutral-700 dark:text-neutral-300">
-            <p className="md:text-xl">Welcome 2025!</p>
+            <p className="md:text-xl">{t("logs.content.2025.title")}</p>
             <div className="mt-4 flex flex-col gap-2">
               <div className="flex gap-3 items-start">
                 <span>☑️</span>
-                <p>
-                  {"Going to start mix martial arts training at a local dojo."}
-                </p>
+                <p>{t("logs.content.2025.text1")}</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>☑️</span>
-                <p>{"Going to learn Machine Learning."}</p>
+                <p>{t("logs.content.2025.text2")}</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>☑️</span>
-                <p>{"Going to create a UI library for Svelte 5."}</p>
+                <p>{t("logs.content.2025.text3")}</p>
               </div>
             </div>
           </div>
@@ -58,25 +56,23 @@ function Logs() {
       content: (
         <div>
           <div className="flex flex-col gap-4 mt-2 mb-8 text-md text-neutral-700 dark:text-neutral-300">
-            <p className="md:text-xl">
-              In March 2024, I moved back to Japan 🇯🇵
-            </p>
+            <p className="md:text-xl">{t("logs.content.2024.title")}</p>
             <div className="mt-4 flex flex-col gap-2">
               <div className="flex gap-3 items-start">
                 <span>✅</span>
-                <p>Skydived from 4,000 meters above the ground.</p>
+                <p>{t("logs.content.2024.text1")}</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>✅</span>
-                <p>Climbed Mt. Fuji(3,776 m = 12,388 feet).</p>
+                <p>{t("logs.content.2024.text2")}</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>✅</span>
-                <p>Bungee jumped from 100 meters above the ground.</p>
+                <p>{t("logs.content.2024.text3")}</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>✅</span>
-                <p>Benchpressed 100kg(220lbs) for 1 rep.</p>
+                <p>{t("logs.content.2024.text4")}</p>
               </div>
             </div>
           </div>
@@ -95,30 +91,22 @@ function Logs() {
       content: (
         <div>
           <div className="flex flex-col gap-4 mt-2 mb-8 text-md text-neutral-700 dark:text-neutral-300">
-            <p className="md:text-xl">
-              I moved to Vancouver, and started working as a Software Engineer.
-              🇨🇦🇺🇸
-            </p>
+            <p className="md:text-xl">{t("logs.content.before2024.title")}</p>
             <div className="mt-4 flex flex-col gap-2">
               <div className="flex gap-3 items-start">
                 <span>✅</span>
-                <p>
-                  Experienced startup launch in NextUI as a core team member.
-                </p>
+                <p>{t("logs.content.before2024.text1")}</p>
               </div>
               <div className="flex gap-3 items-start">
                 <span>✅</span>
-                <p>
-                  Learned basic web a11y concepts at Carbon Design System as a
-                  collaborator.
-                </p>
+                <p>{t("logs.content.before2024.text2")}</p>
               </div>
               <span className="flex gap-3 items-start">etc...</span>
               <LinkPreview
                 url="https://www.linkedin.com/in/harukikuriwada/"
                 className="mt-4 font-semibold text-lg text-indigo-500 underline hover:opacity-80"
               >
-                {t("See more on my LinkedIn →")}
+                {t("logs.content.before2024.see_more")}
               </LinkPreview>
             </div>
           </div>
@@ -126,11 +114,12 @@ function Logs() {
       ),
     },
   ];
+
   return (
     <div id="changelog" className="w-full border-t">
       <div className="max-w-7xl mx-auto pt-12">
         <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-neutral-200">
-          {t("Logs")}
+          {t("logs.title")}
         </h2>
       </div>
 

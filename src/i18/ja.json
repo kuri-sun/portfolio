@@ -1,29 +1,48 @@
 {
-  "Hi, I'm Haruki Kuriwada.": "どうも、栗和田玄紀です。",
-  "About Me": "自己紹介",
-  "I studied at ": "",
-  "Iwate University": "岩手大学",
-  "I'm Ruki from Japan. ": "ハルキと申します 🇯🇵。",
-  " while playing Division 1 soccer. After college, I moved to Canada, and had been working as a Software Engineer 3 years at several startups, including ": "で電気工学を専攻し、大学時代は体育会系サッカー部に所属していました。卒業後、カナダに渡り、いくつかのスタートアップ企業で3年程ソフトウェアエンジニアとして働いていました。",
-  " which participated in ": "という、",
-  " SB 2024. ": "のSB2024に参加していたサンフランシスコのスタートアップなどで経験を積みました。",
-  "Afterwards, I came back to Japan and working for ": "",
-  "March 2024.": "という会社で、現在は働いています。",
-  "I like going hiking and Onsen in my free time.": "趣味は温泉に入る事とハイキングです。",
-  "Projects": "プロジェクト",
-  "Experienced a startup launch as a core member when the company joined the Y Combinator 2024 batch.": "Y Combinator 2024 Batchに参加した際、初期メンバーとしてスタートアップの立ち上げを経験しました。",
-  "SanS is a UI library for boosting your Svelte projects with modular UI components built on Tailwind CSS.": "SanSは、Tailwind CSSで構築されたモジュラーなUIコンポーネントで、Svelteプロジェクトを強化するためのUIライブラリです。(直訳です😓)",
-  "Click to see more details 🚀": "もっと見る 🚀",
-  "Contact": "コンタクト",
-  "If you have some interesting idea, feel free to reach out to me.": "もし面白いアイデアがあれば、お気軽にご連絡ください。",
-  "Contact with This guy": "彼に連絡してみる",
-  "Thank you for staying with me till the end; 😊": "ご覧いただきありがとうございました😊",
-  "You score:": "あなたのスコア：",
-  "Perfect Score!": "パーフェクトです！",
-  "(Paddle) Press": "(パドル) ",
-  "[ Start again? ]": "[ もう一度始める？ ]",
-  "[ Start the Game ]": "[ ゲームを始める ]",
-  "to move left, and": "を押すと左に移動し、",
-  "to move right": "を押すと右に移動します。",
-  "My friend and I are creating a UI library for Svelte 5": "友人と一緒に、Svelte 5向けのUIライブラリを作成しています。"
+  "about": {
+    "title": "自己紹介",
+    "content": "はるきと申します。<br /><IwateLink>岩手大学</IwateLink>で電気工学を専攻し、体育会系サッカー部に所属していました。<br />卒業後、カナダに渡り、<NextUILink>NextUI</NextUILink>を含め、いくつかのスタートアップ企業で3年間ソフトウェアエンジニアとして働いていました。<br />現在は、日本に帰国しています。"
+  },
+  "project": {
+    "title": "プロジェクト",
+    "nextui": {
+      "title": "NextUI",
+      "description": "2024年のY Combinatorバッチに参加した際、コアメンバーとしてスタートアップの立ち上げに参加しました。"
+    },
+    "sansui": {
+      "title": "SanS-UI",
+      "description": "友人と一緒に、Svelte 5向けのUIライブラリを開発しています。"
+    }
+  },
+  "contact": {
+    "title": "コンタクト",
+    "text": "彼に連絡してみる"
+  },
+  "logs": {
+    "title": "ライフログ",
+    "content": {
+      "before2024": {
+        "title": "バンクーバーに移住し、ソフトウェアエンジニアとしてのキャリアをスタート🇨🇦🇺🇸",
+        "text1": "NextUIでスタートアップの立ち上げを経験。",
+        "text2": "Carbon Design Systemで基本的なWebアクセシビリティの概念を学習。",
+        "see_more": "LinkedInでもっと詳しく →"
+      },
+      "2024": {
+        "title": "2024年、日本に帰国しました 🇯🇵",
+        "text1": "地上4,000メートルからスカイダイビング。",
+        "text2": "富士山（3,776m）に登頂。",
+        "text3": "地上100メートルからバンジージャンプ。",
+        "text4": "ベンチプレス100kg（220ポンド）を1回達成。"
+      },
+      "2025": {
+        "title": "ようこそ2025年！🎉",
+        "text1": "地元の道場で総合格闘技のトレーニングを開始予定。",
+        "text2": "機械学習の学習を始める予定。",
+        "text3": "Svelte 5向けのUIライブラリを作成予定。"
+      }
+    }
+  },
+  "footer": {
+    "message": "ご覧いただきありがとうございました😊"
+  }
 }

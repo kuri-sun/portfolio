@@ -8,7 +8,7 @@ function Footer() {
 
   return (
     <footer className="w-full border-t flex flex-col md:gap-4 px-8 py-12 items-center">
-      <p>{t("Thank you for staying with me till the end 😊")}</p>
+      <p>{t("footer.message")}</p>
     </footer>
   );
 }

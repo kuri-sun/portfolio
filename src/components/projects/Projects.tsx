@@ -7,15 +7,13 @@ export default function Projects() {
   const { t } = useTranslation();
   const projects = [
     {
-      title: "NextUI",
-      description: t(
-        "Experienced a startup launch as a core member when the company joined the Y Combinator 2024 batch.",
-      ),
+      title: t("project.nextui.title"),
+      description: t("project.nextui.description"),
       link: "https://nextui.org",
     },
     {
-      title: "SanS UI",
-      description: t("My friend and I are creating a UI library for Svelte 5"),
+      title: t("project.sansui.title"),
+      description: t("project.sansui.description"),
       link: "https://www.sans-ui.org/",
     },
   ];
@@ -24,7 +22,7 @@ export default function Projects() {
     <div id="projects" className="w-full border-t pb-12">
       <div className="max-w-7xl pt-12 mb-16">
         <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-neutral-200 max-w-4xl">
-          {t("Projects")}
+          {t("project.title")}
         </h2>
       </div>
       <div className="w-full flex flex-col gap-4 mx-auto">

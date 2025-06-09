@@ -8,29 +8,15 @@ import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import { FloatingDockDesktop } from "../ui/floating-dock";
 import { LightIcon } from "../ui/icons/lightIcon";
 import { LangIcon } from "../ui/icons/langIcon";
+import { setLanguage } from "@/utils/lang";
 
 function DesktopHeader({ className = "" }) {
   const [isTop, setIsTop] = React.useState(true);
 
-  const onToggleLanguageClick = (newLocale: "en" | "ja") => {
-    i18n.changeLanguage(newLocale);
-    // update html lang attribute
-    const html = document.querySelector("html");
-    if (html) {
-      html.setAttribute("lang", newLocale);
-    }
+  const onToggleLanguageClick = (lang: "en" | "ja") => {
+    i18n.changeLanguage(lang);
+    setLanguage(lang);
   };
-
-  useEffect(() => {
-    // dark/light
-    const html = document.querySelector("html");
-    if (html) {
-      const isDark = localStorage.getItem("dark");
-      if (isDark) {
-        html.classList.add("dark");
-      }
-    }
-  }, []);
 
   useEffect(() => {
     // Header position
@@ -62,6 +48,7 @@ function DesktopHeader({ className = "" }) {
     }
   };
 
+  // Links for the floating dock
   const links = [
     {
       title: "LinkedIn",

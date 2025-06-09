@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { LinkPreview } from "../ui/link-preview";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 export function About() {
   const { t } = useTranslation();
@@ -16,7 +16,7 @@ export function About() {
       >
         <div className="flex flex-row items-center gap-12 justify-start w-full mb-10">
           <h2 className="font-mono text-2xl md:text-4xl text-black dark:text-neutral-200">
-            {t("About Me")}
+            {t("about.title")}
           </h2>
           <Image
             src={"/images/me3.png"}
@@ -27,35 +27,31 @@ export function About() {
             alt="my portfolio (my face image)"
           />
         </div>
-        <div className="gap-4 text-base font-normal leading-loose">
-          {t("I'm HaRuki from Japan. 🇯🇵")}
-          <br />
-          {t("I studied at ")}
-          <LinkPreview
-            url="https://www.iwate-u.ac.jp/index.html"
-            className="font-semibold text-indigo-500 underline hover:opacity-80"
-          >
-            {t("Iwate University")}
-          </LinkPreview>
-          {t(
-            " while playing Division 1 soccer. After college, I moved to Canada, and had been working as a Software Engineer 3 years at several startups, including ",
-          )}
-          <LinkPreview
-            url="https://nextui.org/"
-            className="font-semibold text-indigo-500 underline hover:opacity-80"
-          >
-            {"NextUI"}
-          </LinkPreview>
-          {t(" which participated in ")}
-          <LinkPreview
-            url="https://www.ycombinator.com/"
-            className="font-semibold text-indigo-500 underline hover:opacity-80"
-          >
-            Y Combinator
-          </LinkPreview>
-          {t(" SB2024. ")}
-          <br />
-          {t("Now, I am back in Japan! 😊")}
+        <div>
+          <Trans
+            i18nKey="about.content"
+            components={{
+              br: <br />,
+              IwateLink: (
+                <LinkPreview
+                  url="https://www.iwate-u.ac.jp/index.html"
+                  className="font-semibold text-indigo-500 underline hover:opacity-80"
+                />
+              ),
+              NextUILink: (
+                <LinkPreview
+                  url="https://nextui.org/"
+                  className="font-semibold text-indigo-500 underline hover:opacity-80"
+                />
+              ),
+              YCLink: (
+                <LinkPreview
+                  url="https://www.ycombinator.com/"
+                  className="font-semibold text-indigo-500 underline hover:opacity-80"
+                />
+              ),
+            }}
+          />
         </div>
       </div>
     </div>

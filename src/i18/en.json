@@ -1,1 +1,48 @@
-{}
+{
+  "about": {
+    "title": "About Me",
+    "content": "I'm HaRuki from Japan.<br/>I studied at <IwateLink>Iwate University</IwateLink> while playing Division 1 soccer. After college, I moved to Canada, and had been working as a Software Engineer for 3 years at several startups, such as <NextUILink>NextUI</NextUILink>.<p/><p>Now, I am back in Japan."
+  },
+  "project": {
+    "title": "Projects",
+    "nextui": {
+      "title": "NextUI",
+      "description": "Experienced a startup launch as a core member when the company joined the Y Combinator 2024 batch."
+    },
+    "sansui": {
+      "title": "SanS-UI",
+      "description": "My friend and I are creating a UI library for Svelte 5."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "Contact with him"
+  },
+  "logs": {
+    "title": "Logs",
+    "content": {
+      "before2024": {
+        "title": "I moved to Vancouver, and started working as a Software Engineer🇨🇦🇺🇸",
+        "text1": "Experienced startup launch at NextUI.",
+        "text2": "Learned basic web a11y concepts at Carbon Design System.",
+        "see_more": "See more on my LinkedIn →"
+      },
+      "2024": {
+        "title": "In March 2024, I moved back to Japan 🇯🇵",
+        "text1": "Skydived from 4,000 meters above the ground.",
+        "text2": "Climbed Mt. Fuji(3,776 m = 12,388 feet).",
+        "text3": "Bungee jumped from 100 meters above the ground.",
+        "text4": "Benchpressed 100kg(220lbs) for 1 rep."
+      },
+      "2025": {
+        "title": "Welcome 2025! 🎉",
+        "text1": "Going to start mix martial arts training at a local dojo.",
+        "text2": "Going to learn Machine Learning.",
+        "text3": "Going to create a UI library for Svelte 5."
+      }
+    }
+  },
+  "footer": {
+    "message": "Thank you for visiting😊"
+  }
+}

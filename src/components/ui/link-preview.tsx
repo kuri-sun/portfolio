@@ -13,7 +13,7 @@ import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 type LinkPreviewProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   url: string;
   className?: string;
   width?: number;
