@@ -20,7 +20,7 @@ function Contact() {
           borderRadius="2.75rem"
           href="mailto:harukikuriwada@gmail.com"
           containerClassName="w-56 md:w-64 h-12 md:h-14"
-          className="bg-white dark:bg-slate-900 text-lg text-black dark:text-white border-neutral-200 dark:border-slate-800"
+          className="bg-white dark:bg-slate-900 text-lg text-neutral-800 dark:text-neutral-100 border-neutral-200 dark:border-slate-800"
         >
           {t("contact.text")}
         </Button>

@@ -1,5 +1,8 @@
 "use client";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
+import {
+  IconLayoutNavbarCollapse,
+  IconLayoutNavbarExpand,
+} from "@tabler/icons-react";
 import {
   AnimatePresence,
   MotionValue,
@@ -46,7 +49,7 @@ export const FloatingDockMobile = ({
               >
                 <button
                   key={item.title}
-                  className="h-16 w-16 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
+                  className="h-16 w-16 rounded-full bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center border-2 border-neutral-500 shadow-xl"
                   onClick={item.onClick}
                 >
                   <div className="h-7 w-7">{item.icon}</div>
@@ -58,9 +61,13 @@ export const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-16 w-16 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
+        className="h-16 w-16 rounded-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center border-2 border-neutral-500 shadow-xl"
       >
-        <IconLayoutNavbarCollapse className="h-7 w-7 text-neutral-500 dark:text-neutral-400" />
+        {open ? (
+          <IconLayoutNavbarCollapse className="h-7 w-7 text-neutral-500 dark:text-neutral-400" />
+        ) : (
+          <IconLayoutNavbarExpand className="h-7 w-7 text-neutral-500 dark:text-neutral-400" />
+        )}
       </button>
     </div>
   );
@@ -80,7 +87,7 @@ export const FloatingDockDesktop = ({
       onMouseLeave={() => mouseX.set(Infinity)}
       className={twMerge(
         "mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl pb-3",
-        className
+        className,
       )}
     >
       {items.map((item) => (
@@ -116,7 +123,7 @@ function IconContainer({
   let heightTransformIcon = useTransform(
     distance,
     [-120, 0, 120],
-    [20, 40, 20]
+    [20, 40, 20],
   );
 
   let width = useSpring(widthTransform, {

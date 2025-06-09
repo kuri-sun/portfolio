@@ -33,7 +33,7 @@ export function Button({
     <Component
       className={twMerge(
         "bg-transparent relative text-xl h-12 w-48 p-[1px] overflow-hidden ",
-        containerClassName
+        containerClassName,
       )}
       style={{
         borderRadius: borderRadius,
@@ -42,13 +42,13 @@ export function Button({
     >
       <div
         className="absolute inset-0"
-        style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
+        style={{ borderRadius: `calc(${borderRadius} * 0.93)` }}
       >
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={twMerge(
-              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]",
-              borderClassName
+              "h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--indigo-500)_40%,transparent_80%)]",
+              borderClassName,
             )}
           />
         </MovingBorder>
@@ -57,7 +57,7 @@ export function Button({
       <div
         className={twMerge(
           "relative bg-white/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased",
-          className
+          className,
         )}
         style={{
           borderRadius: `calc(${borderRadius} * 0.96)`,
@@ -95,11 +95,11 @@ export const MovingBorder = ({
 
   const x = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).x
+    (val) => pathRef.current?.getPointAtLength(val).x,
   );
   const y = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).y
+    (val) => pathRef.current?.getPointAtLength(val).y,
   );
 
   const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;

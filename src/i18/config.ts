@@ -3,7 +3,6 @@ import { initReactI18next } from "react-i18next";
 
 import translation_en from "./en.json";
 import translation_ja from "./ja.json";
-import { getLanguage } from "@/utils/lang";
 
 const resources = {
   ja: {
@@ -18,7 +17,7 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: getLanguage(),
+    lng: "en", // default language
     interpolation: {
       escapeValue: false, // react already safes from xss
     },

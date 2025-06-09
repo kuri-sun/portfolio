@@ -1,18 +1,18 @@
 export const setLanguage = (lang: string) => {
   if (typeof window !== "undefined") {
-    localStorage.setItem("lang", lang);
+    // localStorage.setItem("lang", lang);
     document.documentElement.lang = lang;
   }
 };
 
 export const getLanguage = () => {
   if (typeof window !== "undefined") {
-    const savedLang = localStorage.getItem("lang");
+    // const savedLang = localStorage.getItem("lang");
     const browserLang = navigator.language;
 
-    if (savedLang) {
-      return savedLang;
-    }
+    // if (savedLang) {
+    //   return savedLang;
+    // }
 
     const lang = browserLang.split("-")[0]; // Get the language part before the hyphen
     if (lang === "ja" || lang === "en") {

@@ -10,7 +10,6 @@ export function About() {
 
   return (
     <div id="home" className="relative flex flex-col items-center w-full pb-12">
-      {/* Avator */}
       <div
         className={`flex w-full items-center md:items-start flex-col gap-4 pt-12 leading-loose`}
       >
@@ -41,12 +40,6 @@ export function About() {
               NextUILink: (
                 <LinkPreview
                   url="https://nextui.org/"
-                  className="font-semibold text-indigo-500 underline hover:opacity-80"
-                />
-              ),
-              YCLink: (
-                <LinkPreview
-                  url="https://www.ycombinator.com/"
                   className="font-semibold text-indigo-500 underline hover:opacity-80"
                 />
               ),
