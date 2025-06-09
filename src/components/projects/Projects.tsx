@@ -1,14 +1,27 @@
 "use client";
 
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Card, CardDescription, CardTitle } from "../ui/card";
+import { LinkPreview } from "../ui/link-preview";
 
 export default function Projects() {
   const { t } = useTranslation();
   const projects = [
     {
       title: t("project.nextui.title"),
-      description: t("project.nextui.description"),
+      description: (
+        <Trans
+          i18nKey="project.nextui.description"
+          components={{
+            YCLink: (
+              <LinkPreview
+                url="https://www.ycombinator.com/"
+                className="font-semibold text-indigo-500 underline hover:opacity-80"
+              />
+            ),
+          }}
+        />
+      ),
       link: "https://nextui.org",
     },
     {
