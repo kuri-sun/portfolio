@@ -6,9 +6,10 @@ export const setLanguage = (lang: string) => {
 };
 
 export const getLanguage = () => {
-  const savedLang = localStorage.getItem("lang");
-  const browserLang = navigator.language;
   if (typeof window !== "undefined") {
+    const savedLang = localStorage.getItem("lang");
+    const browserLang = navigator.language;
+
     if (savedLang) {
       return savedLang;
     }
@@ -20,6 +21,8 @@ export const getLanguage = () => {
     } else {
       return "en";
     }
+  } else {
+    console.log("Failed to detect the initial language"); // If not in a browser environment, default to English
+    return "en";
   }
-  return "en";
 };
